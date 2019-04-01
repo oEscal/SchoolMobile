@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">ola</string>
+    <string name="app_name">SchoolMobile</string>
+    <string name="SchoolMobile">SchoolMobile</string>
 </resources>
