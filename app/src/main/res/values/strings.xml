@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">SchoolMobile</string>
     <string name="SchoolMobile">SchoolMobile</string>
+    <string name="chat">Chat</string>
+    <string name="ementa">Ementa</string>
+    <string name="mensagens">Mensagens</string>
+    <string name="disciplinas">Disciplinas</string>
+    <string name="schoolmobile">SchoolMobile</string>
+    <string name="hor_rio">Horário</string>
 </resources>
