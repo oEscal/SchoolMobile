@@ -12,25 +12,26 @@
         android:id="@+id/btw_horario"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="0dp"
         android:background="@drawable/main_button1"
         android:drawableStart="@drawable/horario"
         android:fontFamily="serif"
         android:onClick="horarioBtnClick"
-        android:padding="30dp"
 
+        android:padding="30dp"
         android:text="@string/hor_rio"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/btw_disciplinas"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btw_disciplinas"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="0dp"
         android:background="@drawable/main_button2"
         android:drawableStart="@drawable/disciplinas"
         android:fontFamily="serif"
@@ -42,13 +43,14 @@
         android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/btw_mensagens"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btw_horario" />
 
     <Button
         android:id="@+id/btw_mensagens"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="0dp"
         android:background="@drawable/main_button3"
         android:drawableStart="@drawable/chat"
         android:fontFamily="serif"
@@ -60,13 +62,14 @@
         android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/btw_ementa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btw_disciplinas" />
 
     <Button
         android:id="@+id/btw_ementa"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="0dp"
         android:background="@drawable/main_button4"
         android:drawableStart="@drawable/ementa"
         android:fontFamily="serif"
@@ -78,29 +81,8 @@
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="39dp"
-        app:layout_constraintBottom_toTopOf="@+id/btw_horario"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif"
-            android:gravity="center"
-            android:text="@string/schoolmobile"
-            android:textColor="#000000"
-            android:textSize="50sp" />
-    </FrameLayout>
+        app:layout_constraintTop_toBottomOf="@+id/btw_mensagens" />
 
 
 </android.support.constraint.ConstraintLayout>
