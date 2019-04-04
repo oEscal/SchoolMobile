@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/main_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <Button
+        android:id="@+id/btw_horario"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="299dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/main_button"
+        android:onClick="horarioBtnClick"
+        android:text="Horário"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <Button
+        android:id="@+id/btw_ola2"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="299dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/main_button"
+        android:onClick="disciplinasBtnClick"
+        android:text="Disciplinas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btw_horario" />
+
+    <Button
+        android:id="@+id/btw_ola3"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="299dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/main_button"
+        android:onClick="mensagensBtnClick"
+        android:text="Mensagens"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btw_ola2" />
+
+    <Button
+        android:id="@+id/btw_ola4"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="299dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/main_button"
+        android:onClick="ementaBtnClick"
+        android:text="Ementa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btw_ola3" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="299dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="323dp"
+            android:layout_height="match_parent"
+            android:text="SchoolMobile"
+            android:textSize="34dp" />
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -3,4 +3,12 @@
 
     <solid android:color="#B9F6CA"></solid>
 
+    <gradient
+        android:startColor="#011212"
+        android:centerColor="#1A5757"
+        android:endColor="#347373"
+        android:angle="135"/>
+
+
+
 </shape>

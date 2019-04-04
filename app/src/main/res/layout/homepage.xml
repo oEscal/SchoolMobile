@@ -5,7 +5,8 @@
     android:background="@drawable/main_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".HomePage">
+
 
     <Button
         android:id="@+id/btw_horario"
@@ -15,9 +16,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
+        android:padding="30dp"
+        android:drawableLeft="@drawable/horario"
         android:background="@drawable/main_button"
+        android:fontFamily="serif"
         android:onClick="horarioBtnClick"
         android:text="Horário"
+        android:textColor="#000000"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
@@ -30,8 +36,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
+        android:padding="30dp"
+        android:drawableLeft="@drawable/disciplinas"
         android:background="@drawable/main_button"
+        android:fontFamily="serif"
         android:onClick="disciplinasBtnClick"
+        android:textColor="#000000"
         android:text="Disciplinas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,9 +54,13 @@
         android:layout_height="79dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
+        android:padding="30dp"
+        android:drawableLeft="@drawable/chat"
         android:layout_marginEnd="8dp"
         android:background="@drawable/main_button"
+        android:fontFamily="serif"
         android:onClick="mensagensBtnClick"
+        android:textColor="#000000"
         android:text="Mensagens"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,30 +74,37 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
+        android:padding="30dp"
+        android:drawableLeft="@drawable/ementa"
         android:background="@drawable/main_button"
+        android:fontFamily="serif"
         android:onClick="ementaBtnClick"
+        android:textColor="#000000"
         android:text="Ementa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btw_ola3" />
+        app:layout_constraintTop_toBottomOf="@+id/btw_ola3"
+        />
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="299dp"
         android:layout_height="52dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="323dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="serif"
             android:text="SchoolMobile"
+            android:textColor="#E2EEEE"
             android:textSize="34dp" />
     </FrameLayout>
+
 
 </android.support.constraint.ConstraintLayout>
