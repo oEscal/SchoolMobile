@@ -5,7 +5,7 @@
     android:background="@drawable/main_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePage">
+    tools:context=".HorarioPage">
 
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
@@ -24,6 +24,7 @@
         android:layout_marginStart="8dp"
         android:background="#00000000"
         android:drawableStart="@drawable/back"
+        android:onClick="backBtnArrow"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="8dp" />

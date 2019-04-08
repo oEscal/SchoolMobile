@@ -14,10 +14,10 @@ public class HorarioPage extends AppCompatActivity {
     }
 
     public void backBtnArrow(View view) {
+
         startActivity(new Intent(this, HomePage.class));
+
     }
 
-    public void DiaBtn(View view) {
-        startActivity(new Intent(this, DiaHorario.class));
-    }
+    
 }

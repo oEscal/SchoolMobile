@@ -31,4 +31,5 @@ public class HomePage extends AppCompatActivity {
     public void ementaBtnClick(View v) {
         startActivity(new Intent(this, EmentaPage.class));
     }
+
 }
