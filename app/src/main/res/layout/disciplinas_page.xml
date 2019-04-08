@@ -5,7 +5,7 @@
     android:background="@drawable/main_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePage">
+    tools:context=".HorarioPage">
 
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
@@ -17,11 +17,26 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00000000"
+        android:drawableStart="@drawable/back"
+        android:onClick="backBtnArrow"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/app_tittle"
         style="@style/TopBarText"
         android:layout_marginEnd="24dp"
-        android:text="@string/SchoolMobile"
+        android:text="@string/disciplinas"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
@@ -43,41 +58,47 @@
         <TableRow style="@style/TableRowButton">
 
             <Button
-                android:id="@+id/btw_horario"
-                style="@style/MainButton"
-                android:drawableStart="@drawable/calendario_icon"
-                android:onClick="horarioBtnClick"
-                android:text="@string/hor_rio" />
-        </TableRow>
-
-        <TableRow style="@style/TableRowButton">
-
-            <Button
-                android:id="@+id/btw_disciplinas"
-                style="@style/MainButton"
-                android:drawableStart="@drawable/disciplinas_icon"
+                android:id="@+id/btw_portugues"
+                style="@style/OtherButtonMenu"
                 android:onClick="disciplinasBtnClick"
-                android:text="@string/disciplinas" />
+                android:text="@string/portugu_s_a" />
         </TableRow>
 
         <TableRow style="@style/TableRowButton">
 
             <Button
-                android:id="@+id/btw_mensagens"
-                style="@style/MainButton"
-                android:drawableStart="@drawable/mensagens_icon"
-                android:onClick="mensagensBtnClick"
-                android:text="@string/mensagens" />
+                android:id="@+id/btw_biologia"
+                style="@style/OtherButtonMenu"
+                android:onClick="disciplinasBtnClick"
+                android:text="@string/biologia" />
         </TableRow>
 
         <TableRow style="@style/TableRowButton">
 
             <Button
-                android:id="@+id/btw_ementa"
-                style="@style/MainButton"
-                android:drawableStart="@drawable/ementa_icon"
-                android:onClick="ementaBtnClick"
-                android:text="@string/ementa" />
+                android:id="@+id/btw_matematica"
+                style="@style/OtherButtonMenu"
+                android:onClick="disciplinasBtnClick"
+                android:text="@string/matem_tica_a" />
+        </TableRow>
+
+        <TableRow style="@style/TableRowButton">
+
+            <Button
+                android:id="@+id/btw_geologia"
+                style="@style/OtherButtonMenu"
+                android:onClick="disciplinasBtnClick"
+                android:padding="20dp"
+                android:text="@string/geologia" />
+        </TableRow>
+
+        <TableRow style="@style/TableRowButton">
+
+            <Button
+                android:id="@+id/btn_efisica"
+                style="@style/OtherButtonMenu"
+                android:onClick="disciplinasBtnClick"
+                android:text="@string/e_fisica" />
         </TableRow>
     </TableLayout>
 

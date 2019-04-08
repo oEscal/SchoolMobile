@@ -10,7 +10,7 @@ public class Disciplina_Aluno extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_disciplina__aluno);
+        setContentView(R.layout.discplina_info_page);
     }
 
     public void backBtnArrow(View view) {

@@ -10,7 +10,11 @@ public class DisciplinasPage_Aluno extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_disciplinas_page_aluno);
+        setContentView(R.layout.disciplinas_page);
+    }
+
+    public void disciplinasBtnClick(View view) {
+        startActivity(new Intent(this, Disciplina_Aluno.class));
     }
 
     public void backBtnArrow(View view) {

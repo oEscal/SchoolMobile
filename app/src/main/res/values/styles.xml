@@ -13,24 +13,27 @@
 
 
     <style name="MainButton" parent="Theme.AppCompat">
-        <item name="android:background">@color/colorAccent</item>
+        <item name="android:background">@drawable/main_button</item>
         <item name="android:fontFamily">@font/roboto_mono_bold</item>
         <item name="android:textColorPrimary">#FFFFFF</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">30sp</item>
 
         <item name="android:textAlignment">viewStart</item>
 
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:padding">30dp</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:drawableEnd">@drawable/next_arrow</item>
+
     </style>
 
     <style name="OtherButtonMenu" parent="MainButton">
-        <item name="android:background">#bb66b7</item>
+        <item name="android:background">@drawable/other_button_menu</item>
     </style>
 
     <style name="TableRowButton" parent="Theme.AppCompat">
         <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_weight">1</item>
     </style>
 
