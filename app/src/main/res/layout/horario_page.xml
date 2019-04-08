@@ -17,11 +17,22 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:background="#00000000"
+        android:drawableStart="@drawable/back"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="8dp" />
+
     <TextView
         android:id="@+id/app_tittle"
         style="@style/TopBarText"
         android:layout_marginEnd="24dp"
-        android:text="@string/SchoolMobile"
+        android:text="@string/hor_rio"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
@@ -46,13 +57,11 @@
             android:layout_height="match_parent">
 
             <Button
-                style="@style/MainButton"
-                android:id="@+id/btw_horario"
+                style="@style/OtherButtonMenu"
+                android:id="@+id/btw_segunda"
                 android:layout_width="match_parent"
-                android:drawableStart="@drawable/calendario_icon"
-                android:onClick="horarioBtnClick"
-                android:padding="30dp"
-                android:text="@string/hor_rio"/>
+                android:padding="20dp"
+                android:text="@string/segunda" />
         </TableRow>
 
         <TableRow
@@ -60,13 +69,10 @@
             android:layout_height="match_parent">
 
             <Button
-                style="@style/MainButton"
-                android:id="@+id/btw_disciplinas"
+                style="@style/OtherButtonMenu"                android:id="@+id/btw_terca"
                 android:layout_width="match_parent"
-                android:drawableStart="@drawable/disciplinas_icon"
-                android:onClick="disciplinasBtnClick"
-                android:padding="30dp"
-                android:text="@string/disciplinas" />
+                android:padding="20dp"
+                android:text="@string/ter_a" />
         </TableRow>
 
         <TableRow
@@ -74,12 +80,9 @@
             android:layout_height="match_parent">
 
             <Button
-                style="@style/MainButton"
-                android:id="@+id/btw_mensagens"
-                android:drawableStart="@drawable/mensagens_icon"
-                android:onClick="mensagensBtnClick"
-                android:padding="30dp"
-                android:text="@string/mensagens" />
+                style="@style/OtherButtonMenu"                android:id="@+id/btw_quarta"
+                android:padding="20dp"
+                android:text="@string/quarta" />
         </TableRow>
 
         <TableRow
@@ -87,13 +90,18 @@
             android:layout_height="wrap_content">
 
             <Button
-                style="@style/MainButton"
-                android:id="@+id/btw_ementa"
-                android:drawableStart="@drawable/ementa_icon"
-                android:onClick="ementaBtnClick"
+                style="@style/OtherButtonMenu"                android:id="@+id/btw_quinta"
+                android:padding="20dp"
+                android:text="@string/quinta" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-                android:padding="30dp"
-                android:text="@string/ementa"/>
+            <Button
+                style="@style/OtherButtonMenu"                android:id="@+id/btn_sexta"
+                android:padding="20dp"
+                android:text="@string/sexta" />
         </TableRow>
     </TableLayout>
 

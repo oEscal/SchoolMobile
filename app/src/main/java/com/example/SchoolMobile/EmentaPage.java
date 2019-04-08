@@ -20,6 +20,5 @@ public class EmentaPage extends AppCompatActivity {
 
     public void backBtnArrow(View view) {
         startActivity(new Intent(this, HomePage.class));
-
     }
 }

@@ -10,7 +10,7 @@ public class HorarioPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_horario_page);
+        setContentView(R.layout.horario_page);
     }
 
     public void backBtnArrow(View view) {
