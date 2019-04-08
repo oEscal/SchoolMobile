@@ -44,7 +44,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:stretchColumns="*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,55 +51,44 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="MissingConstraints,NotSibling">
 
-        <TableRow
-            android:layout_width="418dp"
-            android:layout_height="match_parent">
+        <TableRow style="@style/TableRowButton">
 
             <Button
-                style="@style/OtherButtonMenu"
                 android:id="@+id/btw_segunda"
-                android:layout_width="match_parent"
-                android:padding="20dp"
+                style="@style/OtherButtonMenu"
                 android:text="@string/segunda" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TableRow style="@style/TableRowButton">
 
             <Button
-                style="@style/OtherButtonMenu"                android:id="@+id/btw_terca"
-                android:layout_width="match_parent"
-                android:padding="20dp"
+                android:id="@+id/btw_terca"
+                style="@style/OtherButtonMenu"
                 android:text="@string/ter_a" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TableRow style="@style/TableRowButton">
 
             <Button
-                style="@style/OtherButtonMenu"                android:id="@+id/btw_quarta"
-                android:padding="20dp"
+                android:id="@+id/btw_quarta"
+                style="@style/OtherButtonMenu"
                 android:text="@string/quarta" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <TableRow style="@style/TableRowButton">
 
             <Button
-                style="@style/OtherButtonMenu"                android:id="@+id/btw_quinta"
+                android:id="@+id/btw_quinta"
+                style="@style/OtherButtonMenu"
                 android:padding="20dp"
                 android:text="@string/quinta" />
         </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
+        <TableRow style="@style/TableRowButton">
 
             <Button
-                style="@style/OtherButtonMenu"                android:id="@+id/btn_sexta"
-                android:padding="20dp"
+                android:id="@+id/btn_sexta"
+                style="@style/OtherButtonMenu"
                 android:text="@string/sexta" />
         </TableRow>
     </TableLayout>

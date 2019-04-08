@@ -19,10 +19,19 @@
         <item name="android:textSize">40sp</item>
 
         <item name="android:textAlignment">viewStart</item>
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">30dp</item>
     </style>
 
     <style name="OtherButtonMenu" parent="MainButton">
         <item name="android:background">#bb66b7</item>
+    </style>
+
+    <style name="TableRowButton" parent="Theme.AppCompat">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
     </style>
 
     <style name="TopBarText" parent="Theme.AppCompat">

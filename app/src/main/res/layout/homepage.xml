@@ -33,7 +33,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:stretchColumns="*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,58 +41,47 @@
         tools:ignore="MissingConstraints,NotSibling">
 
         <TableRow
-            android:layout_width="418dp"
-            android:layout_height="match_parent">
+            style="@style/TableRowButton">
 
             <Button
-                style="@style/MainButton"
                 android:id="@+id/btw_horario"
-                android:layout_width="match_parent"
+                style="@style/MainButton"
                 android:drawableStart="@drawable/calendario_icon"
                 android:onClick="horarioBtnClick"
-                android:padding="30dp"
-                android:text="@string/hor_rio"/>
+                android:text="@string/hor_rio" />
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            style="@style/TableRowButton">
 
             <Button
-                style="@style/MainButton"
                 android:id="@+id/btw_disciplinas"
-                android:layout_width="match_parent"
+                style="@style/MainButton"
                 android:drawableStart="@drawable/disciplinas_icon"
                 android:onClick="disciplinasBtnClick"
-                android:padding="30dp"
                 android:text="@string/disciplinas" />
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            style="@style/TableRowButton">
 
             <Button
-                style="@style/MainButton"
                 android:id="@+id/btw_mensagens"
+                style="@style/MainButton"
                 android:drawableStart="@drawable/mensagens_icon"
                 android:onClick="mensagensBtnClick"
-                android:padding="30dp"
                 android:text="@string/mensagens" />
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            style="@style/TableRowButton">
 
             <Button
-                style="@style/MainButton"
                 android:id="@+id/btw_ementa"
+                style="@style/MainButton"
                 android:drawableStart="@drawable/ementa_icon"
                 android:onClick="ementaBtnClick"
-
-                android:padding="30dp"
-                android:text="@string/ementa"/>
+                android:text="@string/ementa" />
         </TableRow>
     </TableLayout>
 
