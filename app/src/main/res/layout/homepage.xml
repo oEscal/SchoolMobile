@@ -40,7 +40,8 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="MissingConstraints,NotSibling">
 
-        <TableRow style="@style/TableRowButton">
+        <TableRow
+            style="@style/TableRowButton">
 
             <Button
                 android:id="@+id/btw_horario"
@@ -50,7 +51,8 @@
                 android:text="@string/hor_rio" />
         </TableRow>
 
-        <TableRow style="@style/TableRowButton">
+        <TableRow
+            style="@style/TableRowButton">
 
             <Button
                 android:id="@+id/btw_disciplinas"
@@ -60,7 +62,8 @@
                 android:text="@string/disciplinas" />
         </TableRow>
 
-        <TableRow style="@style/TableRowButton">
+        <TableRow
+            style="@style/TableRowButton">
 
             <Button
                 android:id="@+id/btw_mensagens"
@@ -70,7 +73,8 @@
                 android:text="@string/mensagens" />
         </TableRow>
 
-        <TableRow style="@style/TableRowButton">
+        <TableRow
+            style="@style/TableRowButton">
 
             <Button
                 android:id="@+id/btw_ementa"

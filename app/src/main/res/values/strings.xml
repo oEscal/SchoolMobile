@@ -16,4 +16,8 @@
     <string name="e_fisica">E. Fisica</string>
     <string name="matem_tica_a">Matemática A</string>
     <string name="disciplinas">Disciplinas</string>
+    <string name="docente">Docente</string>
+    <string name="nome">Nome</string>
+    <string name="mail">Mail</string>
+    <string name="gabinete">Gabinete</string>
 </resources>
