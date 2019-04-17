@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Disciplina_Aluno"></activity>
+        <activity android:name=".Disciplina_Info_Page"></activity>
         <activity android:name=".DiaHorario" />
         <activity android:name=".EmentaPage" />
         <activity android:name=".Chat" />

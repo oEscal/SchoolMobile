@@ -48,4 +48,43 @@
         <item name="android:layout_marginBottom">8dp</item>
     </style>
 
+    <style name="secondaryToolbar" parent="Theme.AppCompat" >
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#bb66b7</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:theme">?attr/actionBarTheme</item>
+    </style>
+
+    <style name="secondaryToolbarTitle" parent="Theme.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:fontFamily">@font/roboto_mono_bold</item>
+        <item name="android:textSize">27sp</item>
+    </style>
+
+    <style name="titleTableRow" parent="Theme.AppCompat">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textSize">23sp</item>
+    </style>
+
+    <style name="cellTableRow" parent="titleTableRow">
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <style name="secondaryTable" parent="Theme.AppCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+
 </resources>

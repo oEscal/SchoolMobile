@@ -37,7 +37,6 @@ public class DiaHorario extends AppCompatActivity {
     }
 
     public void backBtnArrow(View view) {
-        startActivity(new Intent(this, HorarioPage.class));
+        super.onBackPressed();
     }
-
 }

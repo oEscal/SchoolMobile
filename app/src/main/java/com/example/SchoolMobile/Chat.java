@@ -14,6 +14,6 @@ public class Chat extends AppCompatActivity {
     }
 
     public void backBtnArrow(View view) {
-        startActivity(new Intent(this, HomePage.class));
+        super.onBackPressed();
     }
 }
