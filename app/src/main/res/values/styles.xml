@@ -76,6 +76,7 @@
         <item name="android:textSize">23sp</item>
     </style>
 
+
     <style name="cellTableRow" parent="titleTableRow">
         <item name="android:textSize">17sp</item>
         <item name="android:layout_width">0dp</item>
@@ -86,5 +87,26 @@
         <item name="android:layout_height">0dp</item>
         <item name="android:background">@color/colorAccent</item>
     </style>
+
+    <style name="firstRowSchedule"   parent="Theme.AppCompat">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:textSize">23sp</item>
+
+    </style>
+
+    <style name="TitleSchedule"   parent="Theme.AppCompat">
+
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginTop">12dp</item>
+
+    </style>
+
+
 
 </resources>

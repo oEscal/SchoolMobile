@@ -23,9 +23,9 @@ public class Fill_Info {
         monday.add(new Schedule("Matemática A", "10:20-11:50", "25"));
         schedules.put("Segunda", monday);
 
-        tuesday.add(new Schedule("E Física", "08:30-10:00", "Gin"));
+        tuesday.add(new Schedule("E. Fisica", "08:30-10:00", "Gin"));
         tuesday.add(new Schedule("Português A", "10:20-11:50", "37"));
-        schedules.put("Terca", tuesday);
+        schedules.put("Terça", tuesday);
 
         wednesday.add(new Schedule("Biologia", "08:30-10:00", "5"));
         wednesday.add(new Schedule("Geologia", "10:20-11:50", "19"));
@@ -37,7 +37,7 @@ public class Fill_Info {
         schedules.put("Quinta", thursday);
 
         friday.add(new Schedule("Geologia", "08:30-10:00", "22"));
-        friday.add(new Schedule("E Física", "10:20-11:50", "Gin"));
+        friday.add(new Schedule("E. Fisica", "10:20-11:50", "Gin"));
         friday.add(new Schedule("Português A", "12:00-12:45", "20"));
         schedules.put("Sexta", friday);
 
