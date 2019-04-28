@@ -119,7 +119,7 @@
                                     android:layout_weight="1">
 
                                     <TextView
-                                        android:id="@+id/docente_nome_tit"
+                                        android:id="@+id/ultima_tit"
                                         style="@style/titleTableRow"
                                         android:text="@string/nome"
                                         app:layout_constraintBottom_toBottomOf="parent"
@@ -131,7 +131,7 @@
                                         style="@style/cellTableRow"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintStart_toEndOf="@+id/docente_nome_tit"
+                                        app:layout_constraintStart_toEndOf="@+id/ultima_tit"
                                         app:layout_constraintTop_toTopOf="parent" />
                                 </android.support.constraint.ConstraintLayout>
 

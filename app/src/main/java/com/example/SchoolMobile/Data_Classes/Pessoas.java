@@ -1,0 +1,34 @@
+package com.example.SchoolMobile.Data_Classes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public enum Pessoas {
+
+    prof_portugues_a (new String[] {"José Figueiras", "prof"}),
+    prof_matematica_a (new String[] {"Manuel Garrido", "prof"}),
+    prof_biologia (new String[] {"Tozé Fonseca", "prof"}),
+    prof_geologia (new String[] {"Deolinda Lemos", "prof"}),
+    prof_ed_fisica (new String[] {"Cristina Ferreira", "prof"}),
+    aluno_1 (new String[] {"Sesário da Silva", "aluno"}),
+    aluno_2 (new String[] {"Emanuel dos Santos", "aluno"}),
+    aluno_3 (new String[] {"Ermelinda Almeida", "aluno"}),
+    aluno_4 (new String[] {"Joaquina Silvestre", "aluno"});
+
+    private String[] value;
+
+    Pessoas (String[] value){
+        this.value = value;
+    }
+
+    public static List<String[]> getByName(String name_part) {
+
+        List<String[]> people = new ArrayList();
+
+        for (Pessoas current_p : Pessoas.values())
+            if (current_p.value[0].contains(name_part))
+                people.add(current_p.value);
+
+        return people;
+    }
+}
