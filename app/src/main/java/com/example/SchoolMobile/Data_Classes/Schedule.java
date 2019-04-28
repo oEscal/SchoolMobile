@@ -19,4 +19,8 @@ public class Schedule {
         return this.time;
     }
     public String getSala() { return this.sala; }
+
+    public String[] getAllInfo() {
+        return new String[] {this.subject,this.time,"Sala: "+this.sala};
+    }
 }
