@@ -9,12 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Disciplina_Info_Page"></activity>
-        <activity android:name=".DiaHorario" />
-        <activity android:name=".EmentaPage" />
-        <activity android:name=".Chat" />
-        <activity android:name=".DisciplinasPage_Aluno" />
-        <activity android:name=".HorarioPage" />
+        <activity android:name=".Disciplina_Info_Page"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DiaHorario"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EmentaPage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Search_Messages"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DisciplinasPage_Aluno"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HorarioPage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Messages"
+            android:screenOrientation="portrait"/>
         <activity android:name=".HomePage"
             android:screenOrientation="portrait">
             <intent-filter>

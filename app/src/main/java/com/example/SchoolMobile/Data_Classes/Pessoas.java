@@ -10,10 +10,10 @@ public enum Pessoas {
     prof_biologia (new String[] {"Tozé Fonseca", "prof"}),
     prof_geologia (new String[] {"Deolinda Lemos", "prof"}),
     prof_ed_fisica (new String[] {"Cristina Ferreira", "prof"}),
-    aluno_1 (new String[] {"Sesário da Silva", "aluno"}),
-    aluno_2 (new String[] {"Emanuel dos Santos", "aluno"}),
-    aluno_3 (new String[] {"Ermelinda Almeida", "aluno"}),
-    aluno_4 (new String[] {"Joaquina Silvestre", "aluno"});
+    aluno_1 (new String[] {"Sesário Silva", "aluno"}),
+    aluno_2 (new String[] {"Emanuel Santos", "aluno"}),
+    aluno_3 (new String[] {"Ermelinda Costa", "aluno"}),
+    aluno_4 (new String[] {"Joaquina Silvia", "aluno"});
 
     private String[] value;
 

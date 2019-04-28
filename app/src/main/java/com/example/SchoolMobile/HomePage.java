@@ -25,7 +25,7 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void mensagensBtnClick(View v) {
-        startActivity(new Intent(this, Chat.class));
+        startActivity(new Intent(this, Search_Messages.class));
     }
 
     public void ementaBtnClick(View v) {
