@@ -30,4 +30,5 @@
     <string name="introdu_o"><u>Introdução</u></string>
     <string name="pesquisar_pessoa">Pesquisar pessoa</string>
     <string name="ultima">Última:</string>
+    <string name="mensagem_a_escrever">Mensagem a escrever</string>
 </resources>
