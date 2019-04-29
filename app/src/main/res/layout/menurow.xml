@@ -3,6 +3,7 @@
 <TableRow
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/TitleSchedule"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -51,7 +52,8 @@
                 <TableRow
                     style="@style/TableRowButton"
                     android:layout_width="match_parent"
-                    android:layout_height="50sp">
+                    android:layout_height="50sp"
+                    >
 
                     <android.support.constraint.ConstraintLayout
                         android:layout_width="match_parent"
@@ -60,19 +62,58 @@
 
                         <TextView
                             style="@style/firstRowSchedule"
+                            android:layout_width="match_parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/TableRowButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_marginTop="12sp">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
                         <TextView
                             style="@style/firstRowSchedule"
-                            android:layout_alignParentRight="true"
-                            app:layout_constraintHorizontal_bias="1"
+                            android:layout_width="match_parent"
+                            android:text="HAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAH"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/TableRowButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_marginTop="12sp"
+                    android:layout_marginBottom="12sp">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            style="@style/firstRowSchedule"
+                            android:layout_width="match_parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             />
+
                     </android.support.constraint.ConstraintLayout>
 
                 </TableRow>

@@ -3,6 +3,7 @@ package com.example.SchoolMobile.Data_Classes;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -42,5 +43,17 @@ public class Fill_Info {
         schedules.put("Sexta", friday);
 
         return schedules;
+    }
+
+    public static Map<String,Menu> fill_Menu() {
+        Map<String, Menu> menus = new LinkedHashMap<>();
+
+        menus.put("Segunda",new Menu("Sopa de Legumes","Gratinado de atum com massa espiral e legumes","Fruta da época"));
+        menus.put("Terça",new Menu("Sopa de alho-francês","Feijoada à caseira","Fruta da época"));
+        menus.put("Quarta",new Menu("Sopa de curgete","Bacalhau com natas","Fruta da época"));
+        menus.put("Quinta",new Menu("Creme de abóbora e espinafres","Hambúrguer de aves com macarrão colorido","Gelatina de ananás"));
+        menus.put("Sexta",new Menu("Caldo verde","Lasanha","Fruta da época "));
+
+        return menus;
     }
 }
