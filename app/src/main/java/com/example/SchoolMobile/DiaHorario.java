@@ -1,7 +1,5 @@
 package com.example.SchoolMobile;
 
-
-
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -86,10 +84,7 @@ public class DiaHorario extends AppCompatActivity {
     }
 
     public void go_to_Subject(View view) {
-        TableRow row= (TableRow) view;
-        CardView card=(CardView) row.getChildAt(0);
-        ConstraintLayout layout=(ConstraintLayout) card.getChildAt(0);
-        TextView text_view = (TextView) layout.getChildAt(1);
+        TextView text_view = (TextView) view;
         String subject = text_view.getText().toString();
 
         Intent intent = new Intent(this, Disciplina_Info_Page.class);
