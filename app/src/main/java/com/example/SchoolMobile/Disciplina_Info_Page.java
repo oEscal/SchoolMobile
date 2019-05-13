@@ -13,6 +13,8 @@ import java.util.List;
 
 public class Disciplina_Info_Page extends AppCompatActivity {
 
+    private String name = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,7 @@ public class Disciplina_Info_Page extends AppCompatActivity {
         List<String> info_faltas = info_db.getFaltasInfo(Disciplinas.value(dis));
 
         // prof info
+        name = info_profs.get(0);
         ((TextView) findViewById(R.id.nome_docente_text)).setText(info_profs.get(0));
         ((TextView) findViewById(R.id.mail_docente_text)).setText(info_profs.get(1));
         ((TextView) findViewById(R.id.gabinete_docente_text)).setText(info_profs.get(2));
@@ -38,6 +41,14 @@ public class Disciplina_Info_Page extends AppCompatActivity {
         ((TextView) findViewById(R.id.num_faltas_injustificadas)).setText(info_faltas.get(1));
         ((TextView) findViewById(R.id.num_faltas_material)).setText(info_faltas.get(2));
         ((TextView) findViewById(R.id.num_faltas_disciplinares)).setText(info_faltas.get(3));
+    }
+
+    public void send_message(View view) {
+
+        Intent intent = new Intent(this, Messages.class);
+        intent.putExtra("name", this.name);
+
+        startActivity(intent);
     }
 
     public void backBtnArrow(View view) {
