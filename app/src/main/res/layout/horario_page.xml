@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/main_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_frame"
     tools:context=".HorarioPage">
 
-    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -43,63 +42,302 @@
         app:layout_constraintVertical_bias="0.794"
         tools:ignore="MissingConstraints" />
 
+    <!-- android:stretchColumns="*" -->
+
     <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:stretchColumns="*"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        tools:ignore="MissingConstraints,NotSibling">
+            android:id="@+id/tableLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:ignore="MissingConstraints,NotSibling">
 
-        <TableRow style="@style/TableRowButton">
+            <TableRow
+                style="@style/TableRowButton"
+                android:layout_width="match_parent">
 
-            <Button
-                android:id="@+id/btw_segunda"
-                android:onClick="chooseDay"
-                style="@style/OtherButtonMenu"
-                android:text="@string/segunda" />
-        </TableRow>
+                <Button
+                    android:id="@+id/btw_segunda"
+                    style="@style/OtherButtonMenu"
+                    android:layout_marginStart="8dp"
+                    android:onClick="chooseDay"
+                    android:text="@string/segunda"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-        <TableRow style="@style/TableRowButton">
+                <Button
+                    android:id="@+id/btw_terca"
+                    style="@style/OtherButtonMenu"
+                    android:layout_marginStart="0dp"
+                    android:onClick="chooseDay"
+                    android:text="@string/ter_a"
+                    app:layout_constraintStart_toEndOf="@+id/btw_segunda" />
 
-            <Button
-                android:id="@+id/btw_terca"
-                android:onClick="chooseDay"
-                style="@style/OtherButtonMenu"
-                android:text="@string/ter_a" />
-        </TableRow>
+                <Button
+                    android:id="@+id/btw_quarta"
+                    style="@style/OtherButtonMenu"
+                    android:layout_marginStart="0dp"
+                    android:onClick="chooseDay"
+                    android:text="@string/quarta"
+                    app:layout_constraintStart_toEndOf="@+id/btw_terca" />
 
-        <TableRow style="@style/TableRowButton">
+            </TableRow>
+        </TableLayout>
 
-            <Button
-                android:id="@+id/btw_quarta"
-                android:onClick="chooseDay"
-                style="@style/OtherButtonMenu"
-                android:text="@string/quarta" />
-        </TableRow>
+        <ScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout">
 
-        <TableRow style="@style/TableRowButton">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/btw_quinta"
-                android:onClick="chooseDay"
-                style="@style/OtherButtonMenu"
-                android:padding="20dp"
-                android:text="@string/quinta" />
-        </TableRow>
+                <TableRow android:theme="@style/RowHorario">
 
-        <TableRow style="@style/TableRowButton">
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
 
-            <Button
-                android:id="@+id/btn_sexta"
-                android:onClick="chooseDay"
-                style="@style/OtherButtonMenu"
-                android:text="@string/sexta" />
-        </TableRow>
-    </TableLayout>
+                        <TableLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView"
+                            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                            tools:ignore="MissingConstraints,NotSibling">
+
+                            <TableRow
+                                style="@style/TableRowButton"
+                                android:layout_width="match_parent">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/main_button"
+                                    android:gravity="center"
+                                    android:text="Biologia"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/main_button"
+                                    android:gravity="center"
+                                    android:text="E. Fisica"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/main_button"
+                                    android:gravity="center"
+                                    android:text="Biologia"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#fff" />
+                            </TableRow>
+                        </TableLayout>
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/main_button"
+                            android:gravity="center"
+                            android:text="8:30\n9:15"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#fff"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+                </TableRow>
+                <!--
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="@string/_9_15"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="@string/_10_00"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="@string/_10_20"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="11:05"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="11:50"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="12:00"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="12:45"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="13:30"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="13:50"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="14:35"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="15:20"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="15:30"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="16:15"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="17:00"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#fff" />
+
+            </TableRow>
+            -->
+            </TableLayout>
+        </ScrollView>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>

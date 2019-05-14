@@ -5,11 +5,11 @@
     <string name="ementa">Ementa</string>
     <string name="mensagens">Mensagens</string>
     <string name="hor_rio">Horário</string>
-    <string name="segunda">Segunda</string>
-    <string name="ter_a">Terça</string>
-    <string name="quarta">Quarta</string>
-    <string name="quinta">Quinta</string>
-    <string name="sexta">Sexta</string>
+    <string name="segunda">S</string>
+    <string name="ter_a">T</string>
+    <string name="quarta">Q</string>
+    <string name="quinta">Q</string>
+    <string name="sexta">S</string>
     <string name="portugu_s_a">Português A</string>
     <string name="biologia">Biologia</string>
     <string name="geologia">Geologia</string>
@@ -31,4 +31,8 @@
     <string name="pesquisar_pessoa">Pesquisar pessoa</string>
     <string name="ultima">Última:</string>
     <string name="mensagem_a_escrever">Mensagem a escrever</string>
+    <string name="_8_30">8:30</string>
+    <string name="_9_15">9:15</string>
+    <string name="_10_00">10:00</string>
+    <string name="_10_20">10:20</string>
 </resources>
