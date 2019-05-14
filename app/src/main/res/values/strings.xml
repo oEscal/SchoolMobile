@@ -31,4 +31,6 @@
     <string name="pesquisar_pessoa">Pesquisar pessoa</string>
     <string name="ultima">Última:</string>
     <string name="mensagem_a_escrever">Mensagem a escrever</string>
+    <string name="login">Login</string>
+    <string name="aluno">Aluno</string>
 </resources>

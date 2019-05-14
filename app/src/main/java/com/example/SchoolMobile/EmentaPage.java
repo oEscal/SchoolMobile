@@ -20,6 +20,8 @@ import com.example.SchoolMobile.Data_Classes.Menu;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -31,6 +33,13 @@ public class EmentaPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        Calendar c = Calendar.getInstance();
+
+        Date date = new Date();
+
+        c.setTime(date);
+        int dayofWeek = c.get(Calendar.DAY_OF_WEEK);
+
         menus = Fill_Info.fill_Menu();
 
         super.onCreate(savedInstanceState);
@@ -39,7 +48,7 @@ public class EmentaPage extends AppCompatActivity {
 
         TableLayout mainTable = (TableLayout) findViewById(R.id.mainTable);
 
-        set_Menus(mainTable, this_object);
+        set_Menus(mainTable, this_object,dayofWeek-2);
     }
 
     public TextView[] getTextViews(TableLayout mainTable, int i) {
@@ -63,10 +72,12 @@ public class EmentaPage extends AppCompatActivity {
     }
 
 
-    public void set_Menus(TableLayout mainTable, EmentaPage this_object) {
+    public void set_Menus(TableLayout mainTable, EmentaPage this_object,int week_day) {
 
         for (int i = 0; i < 5; i++) {
             View tr = LayoutInflater.from(this_object).inflate(R.layout.menurow, null, false);
+            if (week_day > i )
+                tr.setAlpha((float) 0.2);
             mainTable.addView(tr);
         }
         List<String> keys = new ArrayList<String>(menus.keySet());
