@@ -67,13 +67,13 @@
     </style>
 
     <style name="titleTableRow" parent="Theme.AppCompat">
-        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_gravity">bottom</item>
         <item name="android:layout_marginStart">8dp</item>
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:textSize">23sp</item>
+        <item name="android:textSize">15sp</item>
     </style>
 
 
