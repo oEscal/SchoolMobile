@@ -41,7 +41,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/_toolbar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/_toolbar"
-                android:onClick="go_to_Subject"/>
+                />
 
             <TableLayout
                 style="@style/secondaryTable"

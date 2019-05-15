@@ -62,7 +62,7 @@ public class HorarioPage extends AppCompatActivity implements GestureDetector.On
                 break;
             case R.id.btn_sexta:
             default:
-                intent.putExtra("day", "Quinta");
+                intent.putExtra("day", "Sexta");
                 break;
         }
 
