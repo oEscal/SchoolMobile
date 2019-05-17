@@ -35,7 +35,6 @@ public class EmentaPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
 
-
         menus = Fill_Info.fill_Menu();
 
         super.onCreate(savedInstanceState);

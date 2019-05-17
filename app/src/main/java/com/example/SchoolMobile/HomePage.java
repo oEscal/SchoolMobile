@@ -14,17 +14,31 @@ public class HomePage extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage);
+
+
+
     }
 
     public void horarioBtnClick(View v) {
-        startActivity(new Intent(this, HorarioPage.class));
+        String person = getIntent().getExtras().getString("person");
+        if (person.equals("aluno") )
+            startActivity(new Intent(this, HorarioPage.class));
+        else
+            startActivity(new Intent(this, HorarioPageDocente.class));
     }
 
     public void disciplinasBtnClick(View v) {
-        startActivity(new Intent(this, DisciplinasPage_Aluno.class));
+        String person = getIntent().getExtras().getString("person");
+        if (person.equals("aluno"))
+            startActivity(new Intent(this, DisciplinasPage_Aluno.class));
+        else
+            startActivity(new Intent(this, DisciplinasPage_Docente.class));
+
     }
 
     public void mensagensBtnClick(View v) {
+        String person = getIntent().getExtras().getString("person");
+
         startActivity(new Intent(this, Search_Messages.class));
     }
 
@@ -32,4 +46,7 @@ public class HomePage extends AppCompatActivity {
         startActivity(new Intent(this, EmentaPage.class));
     }
 
+    public void backBtnArrow(View view) {
+        super.onBackPressed();
+    }
 }

@@ -37,4 +37,7 @@
     <string name="_10_20">10:20</string>
     <string name="login">Login</string>
     <string name="aluno">Aluno</string>
+    <string name="m_faltas">Marcar Faltas</string>
+    <string name="sumario">Sumários</string>
+    <string name="turmas">Turmas</string>
 </resources>

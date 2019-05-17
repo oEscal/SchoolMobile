@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 public class HorarioPage extends AppCompatActivity implements GestureDetector.OnGestureListener {
@@ -47,6 +46,7 @@ public class HorarioPage extends AppCompatActivity implements GestureDetector.On
         int day = b.getId();
 
         Intent intent = new Intent(this, DiaHorario.class);
+        intent.putExtra("person","aluno");
         switch (day) {
             case R.id.btw_segunda:
                 intent.putExtra("day", "Segunda");

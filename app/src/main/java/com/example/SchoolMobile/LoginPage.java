@@ -16,7 +16,15 @@ public class LoginPage extends AppCompatActivity {
 
 
     public void go_to_Aluno(View view) {
-        startActivity(new Intent(this,HomePage.class));
+        Intent intent = new Intent(this, HomePage.class);
+        intent.putExtra("person", "aluno");
+        startActivity(intent);
 
+    }
+
+    public void go_to_Docente(View view) {
+        Intent intent = new Intent(this, HomePage.class);
+        intent.putExtra("person", "docente");
+        startActivity(intent);
     }
 }

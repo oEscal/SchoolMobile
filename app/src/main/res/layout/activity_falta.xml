@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame"
+    tools:context=".Falta">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00000000"
+        android:drawableStart="@drawable/back"
+        android:onClick="backBtnArrow"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/app_tittle"
+        style="@style/TopBarText"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.794"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:stretchColumns="*"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:ignore="MissingConstraints,NotSibling">
+
+            <TableRow style="@style/TableRowButton"
+                android:radius="10dp"
+
+                tools:ignore="OnClick"
+                >
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="10dp"
+                    android:innerRadius="0dp"
+                    android:shape="ring"
+                    android:thicknessRatio="1.9"
+                    app:cardElevation="5dp"
+                    android:layout_margin="1dp">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccentLight">
+
+                        <android.support.v7.widget.Toolbar
+                            android:id="@+id/portugues_toolbar"
+                            style="@style/secondaryToolbar"
+                            android:layout_height="40dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/btw_geologia"
+                            style="@style/secondaryToolbarTitle"
+                            android:text="12ºA"
+
+                            app:layout_constraintBottom_toBottomOf="@+id/portugues_toolbar"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/portugues_toolbar" />
+
+
+                        <TableLayout
+                            style="@style/secondaryTable"
+                            android:layout_height="80dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/portugues_toolbar">
+
+                            <TableRow
+                                style="@style/TableRowButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#bb66b7">
+
+                                <android.support.constraint.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/faltas_portugues"
+                                        style="@style/titleTableRow"
+                                        android:layout_width="match_parent"
+                                        android:text="Nrº de alunos: 18"
+                                        android:drawableEnd="@drawable/next_arrow"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </android.support.constraint.ConstraintLayout>
+
+                            </TableRow>
+
+                            <TableRow
+                                style="@style/TableRowButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#bb66b7"
+                                >
+
+                                <android.support.constraint.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/docente_portugues"
+                                        style="@style/titleTableRow"
+                                        android:layout_width="wrap_content"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </android.support.constraint.ConstraintLayout>
+                            </TableRow>
+
+
+                        </TableLayout>
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </TableRow>
+
+            <TableRow style="@style/TableRowButton"
+                android:paddingTop="10dp"
+                android:radius="10dp"
+                tools:ignore="OnClick"
+                android:onClick="go_to_team"
+                >
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="10dp"
+                    android:innerRadius="0dp"
+                    android:shape="ring"
+                    android:thicknessRatio="1.9"
+                    app:cardElevation="5dp"
+                    android:layout_margin="1dp">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccentLight">
+
+                        <android.support.v7.widget.Toolbar
+                            android:id="@+id/biologia_toolbar"
+                            style="@style/secondaryToolbar"
+                            android:layout_height="40dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/btw_biologia"
+                            style="@style/secondaryToolbarTitle"
+                            android:text="12ºB"
+                            app:layout_constraintBottom_toBottomOf="@+id/biologia_toolbar"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/biologia_toolbar" />
+
+
+                        <TableLayout
+                            style="@style/secondaryTable"
+
+                            android:layout_height="80dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/biologia_toolbar">
+
+                            <TableRow
+                                style="@style/TableRowButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#bb66b7">
+
+                                <android.support.constraint.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/faltas_biologia"
+                                        style="@style/titleTableRow"
+                                        android:text="Nrº de alunos: 22"
+                                        android:layout_width="match_parent"
+                                        android:drawableEnd="@drawable/next_arrow"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </android.support.constraint.ConstraintLayout>
+
+                            </TableRow>
+
+                            <TableRow
+                                style="@style/TableRowButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#bb66b7"
+                                >
+
+                                <android.support.constraint.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/docente_biologia"
+                                        style="@style/titleTableRow"
+                                        android:layout_width="wrap_content"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </android.support.constraint.ConstraintLayout>
+                            </TableRow>
+
+
+                        </TableLayout>
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </TableRow>
+
+
+        </TableLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

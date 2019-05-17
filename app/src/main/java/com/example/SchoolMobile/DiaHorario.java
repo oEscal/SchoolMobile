@@ -27,10 +27,16 @@ public class DiaHorario extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        schedule_map = Fill_Info.fill_Schedules();
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dia_horario);
+
+
+        String person = this.getIntent().getStringExtra("person");
+        if  ( person.equals("aluno") )
+            schedule_map = Fill_Info.fill_Schedules();
+        else
+            schedule_map = Fill_Info.fill_Schedules_Docente();
+
         final DiaHorario this_object = this;
 
         TextView app_title = (TextView) findViewById(R.id.app_tittle);

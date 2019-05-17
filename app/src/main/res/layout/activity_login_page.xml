@@ -60,6 +60,7 @@
                 <Button
                     android:id="@+id/btw_biologia"
                     style="@style/OtherButtonMenu"
+                    android:onClick="go_to_Docente"
                     android:text="@string/docente" />
             </TableRow>
 

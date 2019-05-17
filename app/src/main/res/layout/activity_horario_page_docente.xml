@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame"
+    tools:context=".HorarioPageDocente">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimary"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00000000"
+        android:drawableStart="@drawable/back"
+        android:onClick="backBtnArrow"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/app_tittle"
+        style="@style/TopBarText"
+        android:layout_marginEnd="24dp"
+        android:text="@string/hor_rio"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.794"
+        tools:ignore="MissingConstraints" />
+
+    <!-- android:stretchColumns="*" -->
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints,NotSibling">
+
+        <TableRow
+            style="@style/TableRowButton"
+            android:layout_width="match_parent">
+
+            <Button
+                android:id="@+id/btw_segunda"
+                style="@style/OtherButtonMenuHorario"
+                android:onClick="chooseDay"
+                android:text="@string/segunda"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btw_terca"
+                style="@style/OtherButtonMenuHorario"
+                android:layout_marginStart="0dp"
+                android:onClick="chooseDay"
+                android:text="@string/ter_a"
+                app:layout_constraintStart_toEndOf="@+id/btw_segunda" />
+
+            <Button
+                android:id="@+id/btw_quarta"
+                style="@style/OtherButtonMenuHorario"
+                android:layout_marginStart="0dp"
+                android:onClick="chooseDay"
+                android:text="@string/quarta"
+                app:layout_constraintStart_toEndOf="@+id/btw_terca" />
+
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                        tools:ignore="MissingConstraints,NotSibling">
+
+                        <TableRow
+                            style="@style/TableRowButton"
+                            android:layout_width="match_parent">
+
+                            <TextView
+                                style="@style/CellHorario"
+                                android:text="Biologia\nSala: 37" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty"
+                                 />
+
+                            <TextView
+                                style="@style/CellHorario"
+                                android:text="Biologia\nSala: 5" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/CellHorario"
+                        android:layout_width="50dp"
+                        android:text="8:30\n9:15"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView2"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                        tools:ignore="MissingConstraints,NotSibling">
+
+                        <TableRow
+                            style="@style/TableRowButton"
+                            android:layout_width="match_parent">
+
+                            <TextView
+                                style="@style/CellHorario"
+                                android:text="Biologia\nSala: 37" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty"
+                                />
+
+                            <TextView
+                                style="@style/CellHorario"
+                                android:text="Biologia\nSala: 5"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#fff" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/CellHorario"
+                        android:layout_width="50dp"
+                        android:text="9:15\n10:00"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                        tools:ignore="MissingConstraints,NotSibling">
+
+                        <TableRow
+                            style="@style/TableRowButton"
+                            android:layout_width="match_parent">
+
+                            <TextView
+                                style="@style/CellHorario"
+                                android:text="Geologia\nSala: 25" />
+
+                            <TextView
+                                style="@style/CellHorario"
+                                android:text="Geologia\nSala: 37" />
+
+                            <TextView
+                                style="@style/CellHorario"
+                                android:text="Geologia\nSala: 19"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#fff" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/CellHorario"
+                        android:layout_width="50dp"
+                        android:text="10:20\n11:05"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView4"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                        tools:ignore="MissingConstraints,NotSibling">
+
+                        <TableRow
+                            style="@style/TableRowButton"
+                            android:layout_width="match_parent">
+
+                            <TextView
+                                style="@style/CellHorario"
+                                android:text="Geologia\nSala: 25" />
+
+                            <TextView
+                                style="@style/CellHorario"
+                                android:text="Geologia\nSala: 37" />
+
+                            <TextView
+                                style="@style/CellHorario"
+                                android:text="Geologia\nSala: 19"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#fff" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        style="@style/CellHorario"
+                        android:layout_width="50dp"
+                        android:text="11:05\n11:50"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView5"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                        tools:ignore="MissingConstraints,NotSibling">
+
+                        <TableRow
+                            style="@style/TableRowButton"
+                            android:layout_width="match_parent">
+
+                            <TextView
+                                style="@style/CellHorarioEmpty" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty"
+                                android:text="Matemática A\nSala: 37"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#fff" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        style="@style/CellHorario"
+                        android:layout_width="50dp"
+                        android:text="12:00\n12:45"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView6"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                        tools:ignore="MissingConstraints,NotSibling">
+
+                        <TableRow
+                            style="@style/TableRowButton"
+                            android:layout_width="match_parent">
+
+                            <TextView
+                                style="@style/CellHorarioEmpty" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty"
+                                android:text="Matemática A\nSala: 37"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#fff" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        style="@style/CellHorario"
+                        android:layout_width="50dp"
+                        android:text="12:45\n13:30"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/main_frame"/>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView7"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                        tools:ignore="MissingConstraints,NotSibling">
+
+                        <TableRow
+                            style="@style/TableRowButton"
+                            android:layout_width="match_parent">
+
+                            <TextView
+                                style="@style/CellHorarioEmpty"
+                                android:text="12:45\n13:30" />
+
+                            <TextView
+                                style="@style/CellHorario"
+                                android:text="Biologia\nSala: 37" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        style="@style/CellHorario"
+                        android:layout_width="50dp"
+                        android:text="12:45\n13:30"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView8"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                        tools:ignore="MissingConstraints,NotSibling">
+
+                        <TableRow
+                            style="@style/TableRowButton"
+                            android:layout_width="match_parent">
+
+                            <TextView
+                                style="@style/CellHorarioEmpty"
+                                android:text="13:50\n14:35" />
+
+                            <TextView
+                                style="@style/CellHorario"
+                                android:text="Biologia\nSala: 37" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        style="@style/CellHorario"
+                        android:layout_width="50dp"
+                        android:text="13:50\n14:35"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView9"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                        tools:ignore="MissingConstraints,NotSibling">
+
+                        <TableRow
+                            style="@style/TableRowButton"
+                            android:layout_width="match_parent">
+
+                            <TextView
+                                style="@style/CellHorarioEmpty"
+                                android:text="14:35\n15:20" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        style="@style/CellHorario"
+                        android:layout_width="50dp"
+                        android:text="14:35\n15:20"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView10"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                        tools:ignore="MissingConstraints,NotSibling">
+
+                        <TableRow
+                            style="@style/TableRowButton"
+                            android:layout_width="match_parent">
+
+                            <TextView
+                                style="@style/CellHorarioEmpty"
+                                android:text="15:30\n16:15" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        style="@style/CellHorario"
+                        android:layout_width="50dp"
+                        android:text="15:30\n16:15"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </TableRow>
+
+            <TableRow android:theme="@style/RowHorario">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView11"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                        tools:ignore="MissingConstraints,NotSibling">
+
+                        <TableRow
+                            style="@style/TableRowButton"
+                            android:layout_width="match_parent">
+
+                            <TextView
+                                style="@style/CellHorarioEmpty"
+                                android:text="16:15\n17:00" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty" />
+
+                            <TextView
+                                style="@style/CellHorarioEmpty" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        style="@style/CellHorario"
+                        android:layout_width="50dp"
+                        android:text="16:15\n17:00"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
