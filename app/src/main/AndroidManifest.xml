@@ -9,11 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Falta"></activity>
-        <activity android:name=".Turmas" />
-        <activity android:name=".Disciplina_Info_Page_Docente" />
-        <activity android:name=".DisciplinasPage_Docente" />
-        <activity android:name=".HorarioPageDocente" />
+        <activity android:name=".Aulas"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Falta"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Turmas"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Disciplina_Info_Page_Docente"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DisciplinasPage_Docente"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HorarioPageDocente"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".HomePage"
             android:screenOrientation="portrait" />

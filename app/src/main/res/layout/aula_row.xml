@@ -1,0 +1,95 @@
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_frame"
+    tools:context=".Aulas"
+    style="@style/TableRowButton"
+    android:radius="10dp"
+    tools:ignore="OnClick"
+    android:paddingTop="10dp"
+    android:onClick="go_to_action"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9"
+        app:cardElevation="5dp"
+        android:layout_margin="1dp"
+        android:background="@color/colorAccent"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccentLight">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/portugues_toolbar"
+                style="@style/secondaryToolbar"
+                android:layout_height="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/colorAccent"/>
+
+            <TextView
+                style="@style/secondaryToolbarTitle"
+
+                android:layout_width="match_parent"
+                android:paddingTop="15dp"
+                android:text="Aula 15"
+                android:drawableRight="@drawable/next_arrow"
+
+                app:layout_constraintBottom_toBottomOf="@+id/portugues_toolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/portugues_toolbar" />
+
+
+            <TableLayout
+                style="@style/secondaryTable"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/portugues_toolbar">
+
+                <TableRow
+                    style="@style/TableRowButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+
+                            style="@style/titleTableRow"
+
+                            android:layout_width="match_parent"
+                            android:text="Data: 09-09-2019"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </TableRow>
+
+
+
+
+            </TableLayout>
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</TableRow>

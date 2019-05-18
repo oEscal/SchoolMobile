@@ -1,7 +1,10 @@
 package com.example.SchoolMobile.Data_Classes;
 
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -96,7 +99,7 @@ public class Fill_Info {
         Map<String,List<String>> teams= new LinkedHashMap<>();
         List<String> a = new ArrayList<>();
 
-        a.add("Adriana AmaranteTeixeira");
+        a.add("Adriana Amarante Teixeira");
         a.add("Afonso Guilherme Lapão Martins");
         a.add("Alexandre Daniel Torres");
         a.add("Ana Carolina Peixoto Leitão");
@@ -164,5 +167,34 @@ public class Fill_Info {
         teams.put("12B", b);
 
         return teams.get(key);
+    }
+
+    public static Map<String,String> fill_aulas() {
+
+
+        int minus_day[] = new int [] {0,2,5};
+
+
+        Map<String,String> aulas = new LinkedHashMap<>();
+
+        Date date = new Date();
+        Calendar cal = Calendar.getInstance();
+
+
+        String pattern = "dd-MM-yyyy";
+        int counter = 0;
+        for(int i=15;i>=1;i--) {
+
+
+            cal.setTime(date);
+            cal.add(Calendar.DATE, -minus_day[counter % 3]);
+            minus_day[counter % 3]+=7;
+            counter+=1;
+            String dateInString =new SimpleDateFormat(pattern).format(cal.getTime());
+            aulas.put("Aula "+i,"Data: "+dateInString);
+        }
+
+
+        return aulas;
     }
 }

@@ -30,7 +30,7 @@ public class Turmas extends AppCompatActivity {
     public void go_to_team(View view) {
         Intent intent;
         if (this.type.equals("faltas"))
-            intent =  new Intent(this, Falta.class);
+            intent =  new Intent(this, Aulas.class);
         else
             intent = null;
 
@@ -39,8 +39,10 @@ public class Turmas extends AppCompatActivity {
         ConstraintLayout layout=(ConstraintLayout) card.getChildAt(0);
         TextView tview = (TextView)layout.getChildAt(1);
         String team = (String) tview.getText();
-        System.out.println(team);
+
+
         intent.putExtra("key",team);
+        intent.putExtra("type",this.type);
         startActivity(intent);
 
     }

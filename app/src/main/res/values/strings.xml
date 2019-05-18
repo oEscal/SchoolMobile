@@ -40,4 +40,5 @@
     <string name="m_faltas">Marcar Faltas</string>
     <string name="sumario">Sumários</string>
     <string name="turmas">Turmas</string>
+    <string name="title_activity_aulas">Aulas</string>
 </resources>

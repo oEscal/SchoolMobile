@@ -99,8 +99,10 @@
                         <TextView
                             android:id="@+id/btw_geologia"
                             style="@style/secondaryToolbarTitle"
+                            android:layout_width="match_parent"
                             android:text="12ºA"
-
+                            android:paddingTop="15dp"
+                            android:drawableEnd="@drawable/next_arrow"
                             app:layout_constraintBottom_toBottomOf="@+id/portugues_toolbar"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="@+id/portugues_toolbar" />
@@ -108,7 +110,7 @@
 
                         <TableLayout
                             style="@style/secondaryTable"
-                            android:layout_height="80dp"
+                            android:layout_height="40dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/portugues_toolbar">
 
@@ -128,7 +130,7 @@
                                         style="@style/titleTableRow"
                                         android:layout_width="match_parent"
                                         android:text="Nrº de alunos: 28"
-                                        android:drawableEnd="@drawable/next_arrow"
+
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent" />
@@ -137,28 +139,6 @@
 
                             </TableRow>
 
-                            <TableRow
-                                style="@style/TableRowButton"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="#bb66b7"
-                                >
-
-                                <android.support.constraint.ConstraintLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1">
-
-                                    <TextView
-                                        android:id="@+id/docente_portugues"
-                                        style="@style/titleTableRow"
-                                        android:layout_width="wrap_content"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintTop_toTopOf="parent" />
-
-                                </android.support.constraint.ConstraintLayout>
-                            </TableRow>
 
 
                         </TableLayout>
@@ -172,7 +152,7 @@
                 android:paddingTop="10dp"
                 android:radius="10dp"
                 tools:ignore="OnClick"
-                android:onClick="go_to_teams"
+                android:onClick="go_to_team"
                 >
 
                 <android.support.v7.widget.CardView
@@ -202,6 +182,9 @@
                             android:id="@+id/btw_biologia"
                             style="@style/secondaryToolbarTitle"
                             android:text="12ºB"
+                            android:drawableEnd="@drawable/next_arrow"
+                            android:layout_width="match_parent"
+                            android:paddingTop="15dp"
                             app:layout_constraintBottom_toBottomOf="@+id/biologia_toolbar"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="@+id/biologia_toolbar" />
@@ -210,7 +193,7 @@
                         <TableLayout
                             style="@style/secondaryTable"
 
-                            android:layout_height="80dp"
+                            android:layout_height="40dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/biologia_toolbar">
 
@@ -230,7 +213,7 @@
                                         style="@style/titleTableRow"
                                         android:text="Nrº de alunos: 28"
                                         android:layout_width="match_parent"
-                                        android:drawableEnd="@drawable/next_arrow"
+
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent" />
@@ -239,28 +222,7 @@
 
                             </TableRow>
 
-                            <TableRow
-                                style="@style/TableRowButton"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="#bb66b7"
-                                >
 
-                                <android.support.constraint.ConstraintLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1">
-
-                                    <TextView
-                                        android:id="@+id/docente_biologia"
-                                        style="@style/titleTableRow"
-                                        android:layout_width="wrap_content"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintTop_toTopOf="parent" />
-
-                                </android.support.constraint.ConstraintLayout>
-                            </TableRow>
 
 
                         </TableLayout>
