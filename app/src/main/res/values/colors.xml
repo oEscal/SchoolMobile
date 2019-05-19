@@ -9,5 +9,8 @@
     <color name="colorAccentDark">#338a3e</color>
     <color name="colorAccentLight">#98ee99</color>
 
+    <color name="colorDanger">#f66a29</color>
+
+
     <color name="colorMainTittle">#ffffff</color>
 </resources>

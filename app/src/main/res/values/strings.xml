@@ -22,10 +22,10 @@
     <string name="mail">Mail</string>
     <string name="gab">Gab.</string>
     <string name="faltas">Faltas</string>
-    <string name="justificadas">Justificadas</string>
-    <string name="injustificadas">Injustificadas</string>
+    <string name="justificadas">Justificada</string>
+    <string name="injustificadas">Injustificada</string>
     <string name="de_material">De Material</string>
-    <string name="disciplinares">Disciplinares</string>
+    <string name="disciplinares">Disciplinar</string>
     <string name="documentos">Documentos</string>
     <string name="introdu_o"><u>Introdução</u></string>
     <string name="pesquisar_pessoa">Pesquisar pessoa</string>

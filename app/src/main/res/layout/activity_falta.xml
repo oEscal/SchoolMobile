@@ -129,23 +129,22 @@
 
         </TableLayout>
 
-
     </ScrollView>
 
     <TableLayout
         android:id="@+id/bottomTable"
         style="@style/secondaryTable"
-        android:layout_height="120dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/faltas_toolbar">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TableRow
             style="@style/TableRowButton"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
@@ -155,8 +154,10 @@
                 <TextView
                     android:id="@+id/textView2"
                     style="@style/cellTableRow"
-                    android:layout_width="200dp"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
                     android:text="@string/justificadas"
                     android:textSize="14dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -167,37 +168,39 @@
                 <TextView
                     android:id="@+id/num_faltas_justificadas"
                     style="@style/cellTableRow"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
                     android:text="Material"
                     android:textSize="14dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView2"
+                    app:layout_constraintEnd_toStartOf="@+id/switch6"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <Switch
+                <android.support.v7.widget.SwitchCompat
                     android:id="@+id/switch3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="135dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="34dp"
+                    android:layout_marginStart="8dp"
 
-                    app:layout_constraintBottom_toTopOf="@+id/textView2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.357" />
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView2"
+                    app:layout_constraintTop_toTopOf="@+id/textView2"
+                    app:layout_constraintBottom_toBottomOf="@id/textView2"
+                    android:theme="@style/SwitchFaltas"
+                    />
 
                 <Switch
                     android:id="@+id/switch6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="310dp"
 
-                    app:layout_constraintBottom_toTopOf="@+id/textView2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.49" />
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/num_faltas_justificadas"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/num_faltas_justificadas"
+                    android:theme="@style/SwitchFaltas" />
 
             </android.support.constraint.ConstraintLayout>
 
@@ -206,7 +209,8 @@
         <TableRow
             style="@style/TableRowButton"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
@@ -216,8 +220,10 @@
                 <TextView
                     android:id="@+id/textView3"
                     style="@style/cellTableRow"
-                    android:layout_width="200dp"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
                     android:text="@string/injustificadas"
                     android:textSize="14dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -227,15 +233,14 @@
                 <TextView
                     android:id="@+id/num_faltas_injustificadas"
                     style="@style/cellTableRow"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
                     android:text="Disciplinar"
                     android:textSize="14dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView3"
+                    app:layout_constraintEnd_toStartOf="@+id/switch7"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Switch
@@ -243,29 +248,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:layout_marginStart="155dp"
-                    android:layout_marginTop="9dp"
-                    android:layout_marginBottom="11dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.666" />
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                    app:layout_constraintStart_toEndOf="@+id/textView3"
+                    app:layout_constraintTop_toTopOf="@+id/textView3"
+                    android:theme="@style/SwitchFaltas" />
 
                 <Switch
                     android:id="@+id/switch7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:layout_marginStart="320dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="19dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/num_faltas_injustificadas"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.369"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
+                    app:layout_constraintTop_toTopOf="@+id/num_faltas_injustificadas"
+                    android:theme="@style/SwitchFaltas"/>
             </android.support.constraint.ConstraintLayout>
         </TableRow>
 
