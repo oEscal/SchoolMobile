@@ -36,5 +36,10 @@ public class Disciplina_Info_Page_Docente extends AppCompatActivity {
     }
 
     public void go_to_chat(View view) {
+        Intent i = new Intent(this,Turmas.class);
+        i.putExtra("type","chat");
+        startActivity(i);
+
+
     }
 }

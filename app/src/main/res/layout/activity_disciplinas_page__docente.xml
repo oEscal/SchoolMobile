@@ -152,7 +152,7 @@
                                         android:id="@+id/docente_portugues"
                                         style="@style/titleTableRow"
                                         android:layout_width="wrap_content"
-                                        android:text="Próxima aula: 9-9-2019 10h50"
+                                        android:text="Próxima aula: 21-5-2019 10h50"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent" />
@@ -254,7 +254,7 @@
                                         android:id="@+id/docente_biologia"
                                         style="@style/titleTableRow"
                                         android:layout_width="wrap_content"
-                                        android:text="Próxima aula: 9-9-2019 10h50"
+                                        android:text="Próxima aula:22-5-2019 09h00"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent" />
