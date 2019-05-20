@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
+import com.example.SchoolMobile.Data_Classes.MessagesExamples;
 import com.example.SchoolMobile.Data_Classes.Pessoas;
 
 public class Search_Messages extends AppCompatActivity {
@@ -48,6 +49,7 @@ public class Search_Messages extends AppCompatActivity {
             View tr = LayoutInflater.from(this_object).inflate(R.layout.message_card_search, null, false);
 
             ((TextView) tr.findViewById(R.id.person_name)).setText(current_p[0]);
+            ((TextView) tr.findViewById(R.id.ultima_msg)).setText(MessagesExamples.messages[(int)(Math.random()*(MessagesExamples.messages.length - 1))]);
             tr.findViewById(R.id.send_message_btn).setTag(current_p[0]);
 
             table_layout.addView(tr);

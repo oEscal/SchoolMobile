@@ -13,7 +13,9 @@ public enum Pessoas {
     aluno_1 (new String[] {"Sesário Silva", "aluno"}),
     aluno_2 (new String[] {"Emanuel Santos", "aluno"}),
     aluno_3 (new String[] {"Ermelinda Costa", "aluno"}),
-    aluno_4 (new String[] {"Joaquina Silvia", "aluno"});
+    aluno_4 (new String[] {"Joaquina Silvia", "aluno"}),
+    turma_1 (new String[] {"12º A", "turma"}),
+    turma_2 (new String[] {"12º B", "turma"});
 
     private String[] value;
 
