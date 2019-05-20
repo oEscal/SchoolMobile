@@ -1,6 +1,8 @@
 package com.example.SchoolMobile;
 
+import android.content.DialogInterface;
 import android.support.constraint.ConstraintLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -13,20 +15,28 @@ import android.widget.Switch;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.SchoolMobile.Data_Classes.Aluno;
 import com.example.SchoolMobile.Data_Classes.Fill_Info;
 
+import org.w3c.dom.Text;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Falta extends AppCompatActivity {
 
-    private List<String> students;
+    private List<Aluno> students;
     private TableLayout bottom_table;
     private Switch select_all;
     private ScrollView scroll;
     private int at_least_one;
     private ArrayList<Switch> all_switches;
+    private ArrayList<View> all_tviews;
+    private final Falta this_object= this;
+    private ArrayList<boolean []> type_fault;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +46,6 @@ public class Falta extends AppCompatActivity {
         String key = this.getIntent().getStringExtra("key");
         String aula_key = this.getIntent().getStringExtra("aula_key");
 
-        final Falta this_object = this;
 
 
         if ( key.equals("12ºA") )
@@ -47,6 +56,8 @@ public class Falta extends AppCompatActivity {
         this.scroll = (ScrollView) findViewById(R.id.scroll);
         this.all_switches = new ArrayList<>();
         this.at_least_one = 0;
+        this.type_fault = new ArrayList<>();
+        this.all_tviews = new ArrayList<>();
 
         ((TextView) findViewById(R.id.app_tittle)).setText("Faltas-"+aula_key);
 
@@ -57,13 +68,11 @@ public class Falta extends AppCompatActivity {
 
         this.select_all = (Switch) findViewById(R.id.select_all);
 
-
         this.select_all.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-
                     ConstraintLayout.LayoutParams layoutParams = (ConstraintLayout.LayoutParams) scroll.getLayoutParams();
-                    layoutParams.bottomMargin=129;
+                    layoutParams.bottomMargin=20;
                     scroll.setLayoutParams(layoutParams);
                     bottom_table.setVisibility(View.VISIBLE);
                     for(Switch s:all_switches)
@@ -85,6 +94,8 @@ public class Falta extends AppCompatActivity {
 
         this.set_alunos(mainTable,this_object);
 
+
+
     }
 
     public void set_texts(View tr,String first_name, String last_name,int number) {
@@ -94,6 +105,7 @@ public class Falta extends AppCompatActivity {
         TextView t1 = (TextView) clayout.getChildAt(2);
         TextView t2 = (TextView) clayout.getChildAt(3);
         Switch swi = (Switch) clayout.getChildAt(4);
+        TextView t3 = (TextView) clayout.getChildAt(5);
         this.all_switches.add(swi);
         swi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -103,10 +115,20 @@ public class Falta extends AppCompatActivity {
                     at_least_one-=1;
 
 
-                if (at_least_one>0)
+                if (at_least_one>0) {
+                    ConstraintLayout.LayoutParams layoutParams = (ConstraintLayout.LayoutParams) scroll.getLayoutParams();
+                    layoutParams.bottomMargin=20;
+                    scroll.setLayoutParams(layoutParams);
                     bottom_table.setVisibility(View.VISIBLE);
-                else
+
+                }
+                else {
+                    ConstraintLayout.LayoutParams layoutParams = (ConstraintLayout.LayoutParams) scroll.getLayoutParams();
+                    layoutParams.bottomMargin=0;
+                    scroll.setLayoutParams(layoutParams);
                     bottom_table.setVisibility(View.GONE);
+
+                }
 
             }
         });
@@ -116,21 +138,99 @@ public class Falta extends AppCompatActivity {
         t2.setText("Numero: "+number);
 
 
+        String type[] = new String[] {"Justificada","Material","Injutsificada","Disciplinar"};
+        ArrayList<String> line = new ArrayList<>();
+        for (String i: type) {
+            if(Math.random() < 0.2)
+                line.add(i);
+
+        }
+        StringBuilder sb = new StringBuilder();
+        if (line.size() >0) {
+            for (int i = 0; i < line.size() - 1; i++) {
+                sb.append(line.get(i)+" | ");
+            }
+            sb.append(line.get(line.size()-1));
+        }
+        if (number!=8)
+            t3.setText(sb.toString());
+
     }
 
     public void set_alunos(TableLayout mainTable,  Falta this_object) {
 
         for(int i= 0;i< this.students.size();i++) {
-            String spllited_line[] = this.students.get(i).split("\\s+");
+            String spllited_line[] = this.students.get(i).getNome().split("\\s+");
             View tr = LayoutInflater.from(this_object).inflate(R.layout.aluno_row, null, false);
             set_texts(tr,spllited_line[0],spllited_line[spllited_line.length-1],i+1);
+            all_tviews.add(tr);
             mainTable.addView(tr);
         }
+
 
     }
 
 
     public void backBtnArrow(View view) {
         super.onBackPressed();
+    }
+    public void save_fault(View view) {
+        this.alertBox();
+    }
+
+    public void  set_text_by_fault_box(TextView v,boolean type[]){
+        String type_s[] = new String[] {"Justificada","Material","Injutsificada","Disciplinar"};
+        StringBuilder sb= new StringBuilder();
+        ArrayList<String> just_trues = new ArrayList<>();
+        int counter=0;
+
+        for(int i=0;i<type.length;i++) {
+                if (type[i]) {
+                    just_trues.add(type_s[i]);
+                    counter += 1;
+                }
+
+        }
+        if (counter==0)
+            return ;
+
+
+        for(int i=0; i< just_trues.size() - 1 ;i++) {
+                sb.append(just_trues.get(i)+" | ");
+        }
+        sb.append(just_trues.get(just_trues.size() - 1));
+
+        v.setText(sb.toString());
+    }
+
+    public void alertBox() {
+        new AlertDialog.Builder(this)
+                .setTitle("Atençao")
+                .setMessage("Deseja mesmo realizar esta ação?")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        Switch justificada = (Switch) findViewById(R.id.switch3);
+                        Switch material =(Switch) findViewById(R.id.switch6);
+                        Switch injustificada = (Switch) findViewById(R.id.switch5);
+                        Switch disciplinar = (Switch) findViewById(R.id.switch7);
+
+                        for(int i=0;i<all_switches.size();i++) {
+                            Switch s = all_switches.get(i);
+                            View view = all_tviews.get(i);
+                            TableRow row = (TableRow) view;
+                            CardView cview = (CardView) row.getChildAt(0);
+                            ConstraintLayout clayout = (ConstraintLayout) cview.getChildAt(0);
+                            TextView v = (TextView) clayout.getChildAt(5);
+
+                            if (s.isChecked()){
+                                set_text_by_fault_box(v,new boolean[] {justificada.isChecked(),material.isChecked(),injustificada.isChecked(),disciplinar.isChecked()});
+                            }
+
+                        }
+
+                        Toast.makeText(this_object, "Done!", Toast.LENGTH_SHORT).show();
+                    }})
+                .setNegativeButton(android.R.string.no, null).show();
     }
 }

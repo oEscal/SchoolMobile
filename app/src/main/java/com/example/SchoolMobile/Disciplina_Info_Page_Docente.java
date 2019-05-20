@@ -34,4 +34,7 @@ public class Disciplina_Info_Page_Docente extends AppCompatActivity {
         i.putExtra("type","sumario");
 
     }
+
+    public void go_to_chat(View view) {
+    }
 }

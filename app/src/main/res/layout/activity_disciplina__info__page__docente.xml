@@ -76,6 +76,17 @@
                 android:onClick="go_to_sumario"/>
         </TableRow>
 
+        <TableRow
+            style="@style/TableRowButton"
+            android:paddingTop="25dp">
+
+            <Button
+                android:id="@+id/btw_chat"
+                style="@style/MainButton"
+                android:text="@string/sumario"
+                android:onClick="go_to_chat"/>
+        </TableRow>
+
     </TableLayout>
 
 </android.support.constraint.ConstraintLayout>
