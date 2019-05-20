@@ -83,7 +83,7 @@
             <Button
                 android:id="@+id/btw_chat"
                 style="@style/MainButton"
-                android:text="@string/sumario"
+                android:text="@string/envio_turma"
                 android:onClick="go_to_chat"/>
         </TableRow>
 

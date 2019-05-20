@@ -37,6 +37,8 @@ public class Falta extends AppCompatActivity {
     private ArrayList<View> all_tviews;
     private final Falta this_object= this;
     private ArrayList<boolean []> type_fault;
+    private ArrayList<Switch> box_swicthes;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,19 @@ public class Falta extends AppCompatActivity {
         this.at_least_one = 0;
         this.type_fault = new ArrayList<>();
         this.all_tviews = new ArrayList<>();
+        this.box_swicthes = new ArrayList<Switch>();
+
+
+
+        this.box_swicthes.add((Switch)findViewById(R.id.switch3));
+        this.box_swicthes.add((Switch)findViewById(R.id.switch6));
+        this.box_swicthes.add((Switch)findViewById(R.id.switch5));
+        this.box_swicthes.add((Switch)findViewById(R.id.switch7));
+
+        for(Switch s : this.box_swicthes) {
+            s.setChecked(false);
+        }
+
 
         ((TextView) findViewById(R.id.app_tittle)).setText("Faltas-"+aula_key);
 
@@ -210,12 +225,14 @@ public class Falta extends AppCompatActivity {
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
-                        Switch justificada = (Switch) findViewById(R.id.switch3);
-                        Switch material =(Switch) findViewById(R.id.switch6);
-                        Switch injustificada = (Switch) findViewById(R.id.switch5);
-                        Switch disciplinar = (Switch) findViewById(R.id.switch7);
+
 
                         for(int i=0;i<all_switches.size();i++) {
+                            Switch justificada = box_swicthes.get(0);
+                            Switch material = box_swicthes.get(1);
+                            Switch injustificada = box_swicthes.get(2);
+                            Switch disciplinar =  box_swicthes.get(3);
+
                             Switch s = all_switches.get(i);
                             View view = all_tviews.get(i);
                             TableRow row = (TableRow) view;

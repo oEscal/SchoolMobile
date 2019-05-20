@@ -31,6 +31,8 @@ public class Turmas extends AppCompatActivity {
         Intent intent;
         if (this.type.equals("faltas"))
             intent =  new Intent(this, Aulas.class);
+        else if (this.type.equals("chat"))
+            intent = new Intent(this,Messages.class);
         else
             intent = null;
 
@@ -42,6 +44,7 @@ public class Turmas extends AppCompatActivity {
 
 
         intent.putExtra("key",team);
+        intent.putExtra("name",team);
         intent.putExtra("type",this.type);
         startActivity(intent);
 
