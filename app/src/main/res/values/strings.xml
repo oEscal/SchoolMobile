@@ -5,11 +5,11 @@
     <string name="ementa">Ementa</string>
     <string name="mensagens">Mensagens</string>
     <string name="hor_rio">Horário</string>
-    <string name="segunda">S</string>
-    <string name="ter_a">T</string>
-    <string name="quarta">Q</string>
-    <string name="quinta">Q</string>
-    <string name="sexta">S</string>
+    <string name="segunda">Segunda</string>
+    <string name="ter_a">Terça</string>
+    <string name="quarta">Quarta</string>
+    <string name="quinta">Quinta</string>
+    <string name="sexta">Sexta</string>
     <string name="portugu_s_a">Português A</string>
     <string name="biologia">Biologia</string>
     <string name="geologia">Geologia</string>

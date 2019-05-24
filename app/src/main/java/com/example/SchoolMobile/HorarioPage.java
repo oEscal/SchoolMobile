@@ -10,8 +10,8 @@ import android.widget.Button;
 
 public class HorarioPage extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
-    public static final int SWIPE_THRESHOLD = 100;
-    public static final int SWIPE_VELOCITY_THRESHOLD = 100;
+    public static final int SWIPE_THRESHOLD = 50;
+    public static final int SWIPE_VELOCITY_THRESHOLD = 50;
 
     private GestureDetector gesture_detector;
     private int page_number;
@@ -165,5 +165,15 @@ public class HorarioPage extends AppCompatActivity implements GestureDetector.On
         gesture_detector.onTouchEvent(ev);
 
         return super.dispatchTouchEvent(ev);
+    }
+
+    public void next_page(View view) {
+
+        setContentView(R.layout.horario_page2);
+    }
+
+    public void prev_page(View view) {
+
+        setContentView(R.layout.horario_page);
     }
 }
