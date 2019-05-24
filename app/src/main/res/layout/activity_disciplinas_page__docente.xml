@@ -149,10 +149,10 @@
                                     android:layout_weight="1">
 
                                     <TextView
-                                        android:id="@+id/docente_portugues"
+                                        android:id="@+id/data_geologia"
                                         style="@style/titleTableRow"
                                         android:layout_width="wrap_content"
-                                        android:text="Próxima aula: 21-5-2019 10h50"
+
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent" />
@@ -251,10 +251,10 @@
                                     android:layout_weight="1">
 
                                     <TextView
-                                        android:id="@+id/docente_biologia"
+                                        android:id="@+id/data_biologia"
                                         style="@style/titleTableRow"
                                         android:layout_width="wrap_content"
-                                        android:text="Próxima aula:22-5-2019 09h00"
+
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent" />

@@ -154,7 +154,7 @@ public class Falta extends AppCompatActivity {
         String type[] = new String[] {"Justificada","Material","Injutsificada","Disciplinar"};
         ArrayList<String> line = new ArrayList<>();
         for (String i: type) {
-            if(Math.random() < 0.2)
+            if(Math.random() < 0.05)
                 line.add(i);
 
         }
