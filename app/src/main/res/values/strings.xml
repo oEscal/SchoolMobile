@@ -42,4 +42,7 @@
     <string name="turmas">Turmas</string>
     <string name="title_activity_aulas">Aulas</string>
     <string name="envio_turma">Enviar mensagem à turma</string>
+    <string name="alunos">Alunos</string>
+    <string name="destinatario">Destinatário</string>
+
 </resources>

@@ -16,11 +16,15 @@ import com.example.SchoolMobile.Data_Classes.Pessoas;
 
 public class Search_Messages extends AppCompatActivity {
 
+        private String destinatario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_messages);
         final Search_Messages this_object = this;
+
+        this.destinatario =  this.getIntent().getStringExtra("dest");
 
         putMessages(this, "");
 
@@ -46,13 +50,15 @@ public class Search_Messages extends AppCompatActivity {
         table_layout.removeAllViews();
         String text_search = s;
         for (String[] current_p : Pessoas.getByName(text_search)) {
-            View tr = LayoutInflater.from(this_object).inflate(R.layout.message_card_search, null, false);
+            if (current_p[1].equals(this.destinatario) ) {
+                View tr = LayoutInflater.from(this_object).inflate(R.layout.message_card_search, null, false);
 
-            ((TextView) tr.findViewById(R.id.person_name)).setText(current_p[0]);
-            ((TextView) tr.findViewById(R.id.ultima_msg)).setText(MessagesExamples.messages[(int)(Math.random()*(MessagesExamples.messages.length - 1))]);
-            tr.findViewById(R.id.send_message_btn).setTag(current_p[0]);
+                ((TextView) tr.findViewById(R.id.person_name)).setText(current_p[0]);
+                ((TextView) tr.findViewById(R.id.ultima_msg)).setText(MessagesExamples.messages[(int) (Math.random() * (MessagesExamples.messages.length - 1))]);
+                tr.findViewById(R.id.send_message_btn).setTag(current_p[0]);
 
-            table_layout.addView(tr);
+                table_layout.addView(tr);
+            }
         }
     }
 

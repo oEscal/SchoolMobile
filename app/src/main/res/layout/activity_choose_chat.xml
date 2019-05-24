@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/main_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseChat">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00000000"
+        android:drawableStart="@drawable/back"
+        android:onClick="backBtnArrow"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/app_tittle"
+        style="@style/TopBarText"
+        android:text="@string/destinatario"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.794"
+        tools:ignore="MissingConstraints" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints,NotSibling">
+
+        <TableRow
+            style="@style/TableRowButton"
+            >
+
+            <Button
+                android:id="@+id/btw_horario"
+                style="@style/OtherButtonMenu"
+                android:text="@string/alunos"
+                android:onClick="go_to_msg"
+                />
+        </TableRow>
+
+        <TableRow
+            style="@style/TableRowButton"
+
+            android:paddingTop="25dp">
+
+            <Button
+                android:id="@+id/btw_disciplinas"
+                style="@style/OtherButtonMenu"
+                android:text="@string/docente"
+                android:onClick="go_to_msg"
+                />
+        </TableRow>
+
+        <TableRow
+            style="@style/TableRowButton"
+
+            android:paddingTop="25dp">
+
+            <Button
+
+                android:id="@+id/btw_chat"
+                style="@style/OtherButtonMenu"
+                android:text="@string/turmas"
+                android:onClick="go_to_msg"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
