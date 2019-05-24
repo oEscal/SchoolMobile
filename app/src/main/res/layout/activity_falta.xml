@@ -283,7 +283,6 @@
                     style="@style/cellTableRow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textFontWeight="bold"
                     android:text="Confirmar"
                     android:textSize="30dp"
                     android:textAlignment="center"

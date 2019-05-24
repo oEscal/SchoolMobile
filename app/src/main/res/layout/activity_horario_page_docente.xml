@@ -124,7 +124,7 @@
                             android:layout_width="match_parent">
 
                             <TextView
-                                style="@style/CellHorario"
+                                style="@style/CellHorarioWithIcon"
                                 android:text="Biologia\nSala: 37" />
 
                             <TextView
@@ -132,14 +132,14 @@
                                  />
 
                             <TextView
-                                style="@style/CellHorario"
+                                style="@style/CellHorarioWithIcon"
                                 android:text="Biologia\nSala: 5" />
                         </TableRow>
                     </TableLayout>
 
                     <TextView
                         android:id="@+id/textView"
-                        style="@style/CellHorario"
+                        style="@style/CellHorarioWithIcon"
                         android:layout_width="50dp"
                         android:text="8:30\n9:15"
                         android:textSize="12sp"
@@ -170,7 +170,7 @@
                             android:layout_width="match_parent">
 
                             <TextView
-                                style="@style/CellHorario"
+                                style="@style/CellHorarioWithIcon"
                                 android:text="Biologia\nSala: 37" />
 
                             <TextView
@@ -178,7 +178,7 @@
                                 />
 
                             <TextView
-                                style="@style/CellHorario"
+                                style="@style/CellHorarioWithIcon"
                                 android:text="Biologia\nSala: 5"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="#fff" />
@@ -187,7 +187,7 @@
 
                     <TextView
                         android:id="@+id/textView2"
-                        style="@style/CellHorario"
+                        style="@style/CellHorarioWithIcon"
                         android:layout_width="50dp"
                         android:text="9:15\n10:00"
                         android:textSize="12sp"
@@ -218,15 +218,15 @@
                             android:layout_width="match_parent">
 
                             <TextView
-                                style="@style/CellHorario"
+                                style="@style/CellHorarioWithIcon"
                                 android:text="Geologia\nSala: 25" />
 
                             <TextView
-                                style="@style/CellHorario"
+                                style="@style/CellHorarioWithIcon"
                                 android:text="Geologia\nSala: 37" />
 
                             <TextView
-                                style="@style/CellHorario"
+                                style="@style/CellHorarioWithIcon"
                                 android:text="Geologia\nSala: 19"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="#fff" />
@@ -235,7 +235,7 @@
 
                     <TextView
                         android:id="@+id/textView3"
-                        style="@style/CellHorario"
+                        style="@style/CellHorarioWithIcon"
                         android:layout_width="50dp"
                         android:text="10:20\n11:05"
                         android:textSize="12sp"
@@ -266,15 +266,15 @@
                             android:layout_width="match_parent">
 
                             <TextView
-                                style="@style/CellHorario"
+                                style="@style/CellHorarioWithIcon"
                                 android:text="Geologia\nSala: 25" />
 
                             <TextView
-                                style="@style/CellHorario"
+                                style="@style/CellHorarioWithIcon"
                                 android:text="Geologia\nSala: 37" />
 
                             <TextView
-                                style="@style/CellHorario"
+                                style="@style/CellHorarioWithIcon"
                                 android:text="Geologia\nSala: 19"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="#fff" />
@@ -283,7 +283,7 @@
 
                     <TextView
                         android:id="@+id/textView4"
-                        style="@style/CellHorario"
+                        style="@style/CellHorarioWithIcon"
                         android:layout_width="50dp"
                         android:text="11:05\n11:50"
                         android:textSize="12sp"
@@ -329,7 +329,7 @@
 
                     <TextView
                         android:id="@+id/textView5"
-                        style="@style/CellHorario"
+                        style="@style/CellHorarioWithIcon"
                         android:layout_width="50dp"
                         android:text="12:00\n12:45"
                         android:textSize="12sp"
@@ -375,7 +375,7 @@
 
                     <TextView
                         android:id="@+id/textView6"
-                        style="@style/CellHorario"
+                        style="@style/CellHorarioWithIcon"
                         android:layout_width="50dp"
                         android:text="12:45\n13:30"
                         android:textSize="12sp"
@@ -415,7 +415,7 @@
                                 android:text="12:45\n13:30" />
 
                             <TextView
-                                style="@style/CellHorario"
+                                style="@style/CellHorarioWithIcon"
                                 android:text="Biologia\nSala: 37" />
 
                             <TextView
@@ -425,7 +425,7 @@
 
                     <TextView
                         android:id="@+id/textView7"
-                        style="@style/CellHorario"
+                        style="@style/CellHorarioWithIcon"
                         android:layout_width="50dp"
                         android:text="12:45\n13:30"
                         android:textSize="12sp"
@@ -460,7 +460,7 @@
                                 android:text="13:50\n14:35" />
 
                             <TextView
-                                style="@style/CellHorario"
+                                style="@style/CellHorarioWithIcon"
                                 android:text="Biologia\nSala: 37" />
 
                             <TextView
@@ -470,7 +470,7 @@
 
                     <TextView
                         android:id="@+id/textView8"
-                        style="@style/CellHorario"
+                        style="@style/CellHorarioWithIcon"
                         android:layout_width="50dp"
                         android:text="13:50\n14:35"
                         android:textSize="12sp"
@@ -514,7 +514,7 @@
 
                     <TextView
                         android:id="@+id/textView9"
-                        style="@style/CellHorario"
+                        style="@style/CellHorarioWithIcon"
                         android:layout_width="50dp"
                         android:text="14:35\n15:20"
                         android:textSize="12sp"
@@ -558,7 +558,7 @@
 
                     <TextView
                         android:id="@+id/textView10"
-                        style="@style/CellHorario"
+                        style="@style/CellHorarioWithIcon"
                         android:layout_width="50dp"
                         android:text="15:30\n16:15"
                         android:textSize="12sp"
@@ -602,7 +602,7 @@
 
                     <TextView
                         android:id="@+id/textView11"
-                        style="@style/CellHorario"
+                        style="@style/CellHorarioWithIcon"
                         android:layout_width="50dp"
                         android:text="16:15\n17:00"
                         android:textSize="12sp"

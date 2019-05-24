@@ -124,15 +124,18 @@
                                 android:layout_width="match_parent">
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToBiologia"
                                     android:text="Biologia\nSala: 37" />
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToFisica"
                                     android:text="E. Fisica\nSala: Gin" />
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToBiologia"
                                     android:text="Biologia\nSala: 5" />
                             </TableRow>
                         </TableLayout>
@@ -170,15 +173,18 @@
                                 android:layout_width="match_parent">
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToBiologia"
                                     android:text="Biologia\nSala: 37" />
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToFisica"
                                     android:text="E. Fisica\nSala: Gin" />
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToBiologia"
                                     android:text="Biologia\nSala: 5"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
                                     android:textColor="#fff" />
@@ -218,15 +224,18 @@
                                 android:layout_width="match_parent">
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToMatematica"
                                     android:text="Matemática A\nSala: 25" />
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToPortugues"
                                     android:text="Português A\nSala: 37" />
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToGeologia"
                                     android:text="Geologia\nSala: 19"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
                                     android:textColor="#fff" />
@@ -266,15 +275,18 @@
                                 android:layout_width="match_parent">
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToMatematica"
                                     android:text="Matemática A\nSala: 25" />
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToPortugues"
                                     android:text="Português A\nSala: 37" />
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToGeologia"
                                     android:text="Geologia\nSala: 19"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
                                     android:textColor="#fff" />
@@ -320,7 +332,8 @@
                                     style="@style/CellHorarioEmpty" />
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToMatematica"
                                     android:text="Matemática A\nSala: 37"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
                                     android:textColor="#fff" />
@@ -366,7 +379,8 @@
                                     style="@style/CellHorarioEmpty" />
 
                                 <TextView
-                                    style="@style/CellHorario"
+                                    style="@style/CellHorarioWithIcon"
+                                    android:onClick="goToMatematica"
                                     android:text="Matemática A\nSala: 37"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
                                     android:textColor="#fff" />

@@ -70,6 +70,36 @@ public class HorarioPage extends AppCompatActivity implements GestureDetector.On
 
     }
 
+    public void goToBiologia(View view) {
+        Intent intent = new Intent(this, Disciplina_Info_Page.class);
+        intent.putExtra("dis","Biologia");
+        startActivity(intent);
+    }
+
+    public void goToMatematica(View view) {
+        Intent intent = new Intent(this, Disciplina_Info_Page.class);
+        intent.putExtra("dis","Matemática A");
+        startActivity(intent);
+    }
+
+    public void goToFisica(View view) {
+        Intent intent = new Intent(this, Disciplina_Info_Page.class);
+        intent.putExtra("dis","E. Fisica");
+        startActivity(intent);
+    }
+
+    public void goToGeologia(View view) {
+        Intent intent = new Intent(this, Disciplina_Info_Page.class);
+        intent.putExtra("dis","Geologia");
+        startActivity(intent);
+    }
+
+    public void goToPortugues(View view) {
+        Intent intent = new Intent(this, Disciplina_Info_Page.class);
+        intent.putExtra("dis","Português A");
+        startActivity(intent);
+    }
+
     @Override
     public boolean onDown(MotionEvent e) {
         return false;

@@ -167,7 +167,7 @@ public class Falta extends AppCompatActivity {
             }
             sb.append(line.get(line.size()-1));
         }
-        if (number!=8)
+        //if (number!=8)
             t3.setText(sb.toString());
 
     }
