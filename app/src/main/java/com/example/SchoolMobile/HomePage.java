@@ -5,10 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import java.nio.channels.FileLock;
+
 public class HomePage extends AppCompatActivity {
 
     HomePage context = this;
-
+    private boolean home_pressed;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -16,6 +18,7 @@ public class HomePage extends AppCompatActivity {
         setContentView(R.layout.homepage);
 
 
+        this.home_pressed = false;
 
     }
 
@@ -37,9 +40,7 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void mensagensBtnClick(View v) {
-        String person = getIntent().getExtras().getString("person");
-
-        startActivity(new Intent(this, Search_Messages.class));
+        startActivity(new Intent(this, ChooseChat.class));
     }
 
     public void ementaBtnClick(View v) {
@@ -47,6 +48,12 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void backBtnArrow(View view) {
-        super.onBackPressed();
+
+        if (this.home_pressed)
+            super.onBackPressed();
+        else {
+            startActivity(new Intent(this, LoginPage.class));
+        }
+
     }
 }

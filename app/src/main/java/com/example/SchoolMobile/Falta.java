@@ -69,9 +69,7 @@ public class Falta extends AppCompatActivity {
         this.box_swicthes.add((Switch)findViewById(R.id.switch5));
         this.box_swicthes.add((Switch)findViewById(R.id.switch7));
 
-        for(Switch s : this.box_swicthes) {
-            s.setChecked(false);
-        }
+        this.clearTable();
 
 
         ((TextView) findViewById(R.id.app_tittle)).setText("Faltas-"+aula_key);
@@ -167,7 +165,7 @@ public class Falta extends AppCompatActivity {
             }
             sb.append(line.get(line.size()-1));
         }
-        //if (number!=8)
+        if (number!=8)
             t3.setText(sb.toString());
 
     }
@@ -184,7 +182,10 @@ public class Falta extends AppCompatActivity {
 
 
     }
-
+    public void clearTable() {
+        for(Switch s: this.box_swicthes)
+            s.setChecked(false);
+    }
 
     public void backBtnArrow(View view) {
         super.onBackPressed();
@@ -247,6 +248,9 @@ public class Falta extends AppCompatActivity {
                         }
 
                         Toast.makeText(this_object, "Done!", Toast.LENGTH_SHORT).show();
+                        clearTable();
+                        bottom_table.setVisibility(View.GONE);
+
                     }})
                 .setNegativeButton(android.R.string.no, null).show();
     }
