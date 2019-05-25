@@ -173,7 +173,7 @@ public class Fill_Info {
     public static Map<String,String> fill_aulas() {
 
 
-        int minus_day[] = new int [] {0,2,5};
+        int minus_day[] = new int [] {1,2,5};
 
 
         Map<String,String> aulas = new LinkedHashMap<>();
