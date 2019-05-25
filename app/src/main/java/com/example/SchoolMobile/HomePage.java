@@ -40,11 +40,17 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void mensagensBtnClick(View v) {
-        startActivity(new Intent(this, ChooseChat.class));
+        String person = getIntent().getExtras().getString("person");
+        Intent new_page = new Intent(this, ChooseChat.class);
+        new_page.putExtra("person", person);
+        startActivity(new_page);
     }
 
     public void ementaBtnClick(View v) {
-        startActivity(new Intent(this, EmentaPage.class));
+        String person = getIntent().getExtras().getString("person");
+        Intent new_page = new Intent(this, EmentaPage.class);
+        new_page.putExtra("person", person);
+        startActivity(new_page);
     }
 
     public void backBtnArrow(View view) {

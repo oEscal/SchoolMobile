@@ -20,6 +20,7 @@ public class Aulas extends AppCompatActivity {
     private String type;
     private String key;
     private Map<String,String> aulas;
+    private String dis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +33,13 @@ public class Aulas extends AppCompatActivity {
         this.type = this.getIntent().getStringExtra("type");
         this.key = this.getIntent().getStringExtra("key");
         this.aulas = Fill_Info.fill_aulas();
+        this.dis = this.getIntent().getStringExtra("dis");
 
         TableLayout mainTable = (TableLayout) findViewById(R.id.mainTable);
 
-        ((TextView) findViewById(R.id.app_tittle)).setText("Aulas-"+key);
+        // ((TextView) findViewById(R.id.app_tittle)).setText("Aulas-"+key);
+        ((TextView)findViewById(R.id.app_tittle)).setText(dis);
+        ((TextView)findViewById(R.id.app_sub_tittle)).setText("Aulas - Faltas do " + key);
 
         set_aulas(mainTable,this_object);
 
@@ -79,8 +83,10 @@ public class Aulas extends AppCompatActivity {
 
 
         Intent intent;
-        if (this.type.equals("faltas"))
+        if (this.type.equals("faltas")) {
             intent =  new Intent(this, Falta.class);
+            intent.putExtra("dis", dis);
+        }
         else
             intent = null;
 
@@ -97,6 +103,8 @@ public class Aulas extends AppCompatActivity {
     }
 
     public void homeButton(View view) {
-        startActivity(new Intent(this, HomePage.class));
+        Intent new_page = new Intent(this, HomePage.class);
+        new_page.putExtra("person", "docente");
+        startActivity(new_page);
     }
 }

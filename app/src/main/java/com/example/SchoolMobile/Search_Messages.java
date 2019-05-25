@@ -66,6 +66,7 @@ public class Search_Messages extends AppCompatActivity {
 
         Intent intent = new Intent(this, Messages.class);
         intent.putExtra("name", view.getTag().toString());
+        intent.putExtra("person", getIntent().getExtras().getString("person"));
 
         startActivity(intent);
     }
@@ -75,6 +76,8 @@ public class Search_Messages extends AppCompatActivity {
     }
 
     public void homeButton(View view) {
-        startActivity(new Intent(this, HomePage.class));
+        Intent new_page = new Intent(this, HomePage.class);
+        new_page.putExtra("person", getIntent().getExtras().getString("person"));
+        startActivity(new_page);
     }
 }

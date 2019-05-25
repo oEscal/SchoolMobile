@@ -8,12 +8,14 @@ import android.widget.TextView;
 
 public class Disciplina_Info_Page_Docente extends AppCompatActivity {
 
+    String dis;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_disciplina__info__page__docente);
 
-        String dis = getIntent().getExtras().getString("dis");
+        this.dis = getIntent().getExtras().getString("dis");
 
         ((TextView) findViewById(R.id.app_tittle)).setText(dis);
 
@@ -26,6 +28,7 @@ public class Disciplina_Info_Page_Docente extends AppCompatActivity {
     public void go_to_faltas(View view) {
         Intent i = new Intent(this,Turmas.class);
         i.putExtra("type","faltas");
+        i.putExtra("dis", dis);
         startActivity(i);
     }
 
@@ -44,6 +47,8 @@ public class Disciplina_Info_Page_Docente extends AppCompatActivity {
     }
 
     public void homeButton(View view) {
-        startActivity(new Intent(this, HomePage.class));
+        Intent new_page = new Intent(this, HomePage.class);
+        new_page.putExtra("person", "docente");
+        startActivity(new_page);
     }
 }

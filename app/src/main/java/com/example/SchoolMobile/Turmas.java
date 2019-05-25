@@ -14,6 +14,7 @@ import com.example.SchoolMobile.Data_Classes.Disciplinas;
 public class Turmas extends AppCompatActivity {
 
     private String type;
+    private String dis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,13 @@ public class Turmas extends AppCompatActivity {
         setContentView(R.layout.activity_turmas);
 
         this.type= this.getIntent().getStringExtra("type");
+        this.dis = this.getIntent().getStringExtra("dis");
+
+        ((TextView)findViewById(R.id.app_tittle)).setText(dis);
+        if (this.type.equals("faltas"))
+            ((TextView)findViewById(R.id.app_sub_tittle)).setText("Turmas - Faltas");
+        else
+            ((TextView)findViewById(R.id.app_sub_tittle)).setText("Turmas - Mensagens");
     }
 
     public void backBtnArrow(View view) {
@@ -29,10 +37,14 @@ public class Turmas extends AppCompatActivity {
 
     public void go_to_team(View view) {
         Intent intent;
-        if (this.type.equals("faltas"))
+        if (this.type.equals("faltas")) {
             intent =  new Intent(this, Aulas.class);
-        else if (this.type.equals("chat"))
+            intent.putExtra("dis", dis);
+        }
+        else if (this.type.equals("chat")) {
             intent = new Intent(this,Messages.class);
+            intent.putExtra("person", "docente");
+        }
         else
             intent = null;
 
@@ -51,6 +63,8 @@ public class Turmas extends AppCompatActivity {
     }
 
     public void homeButton(View view) {
-        startActivity(new Intent(this, HomePage.class));
+        Intent new_page = new Intent(this, HomePage.class);
+        new_page.putExtra("person", "docente");
+        startActivity(new_page);
     }
 }

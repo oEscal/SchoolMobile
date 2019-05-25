@@ -66,6 +66,8 @@ public class HorarioPage extends AppCompatActivity implements GestureDetector.On
                 break;
         }
 
+        intent.putExtra("person", "aluno");
+
         startActivity(intent);
 
     }
@@ -160,7 +162,6 @@ public class HorarioPage extends AppCompatActivity implements GestureDetector.On
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
 
-        System.out.println(ev.toString());
 
         gesture_detector.onTouchEvent(ev);
 
@@ -178,6 +179,8 @@ public class HorarioPage extends AppCompatActivity implements GestureDetector.On
     }
 
     public void homeButton(View view) {
-        startActivity(new Intent(this, HomePage.class));
+        Intent new_page = new Intent(this, HomePage.class);
+        new_page.putExtra("person", "aluno");
+        startActivity(new_page);
     }
 }

@@ -39,6 +39,7 @@ public class Falta extends AppCompatActivity {
     private final Falta this_object= this;
     private ArrayList<boolean []> type_fault;
     private ArrayList<Switch> box_swicthes;
+    private String dis;
 
 
     @Override
@@ -48,8 +49,10 @@ public class Falta extends AppCompatActivity {
 
         String key = this.getIntent().getStringExtra("key");
         String aula_key = this.getIntent().getStringExtra("aula_key");
+        this.dis = this.getIntent().getStringExtra("dis");
 
-
+        ((TextView)findViewById(R.id.app_tittle)).setText(dis);
+        ((TextView)findViewById(R.id.app_sub_tittle)).setText(aula_key + " - Faltas do " + key);
 
         if ( key.equals("12ºA") )
             this.students = Fill_Info.fill_team("12A");
@@ -73,7 +76,7 @@ public class Falta extends AppCompatActivity {
         this.clearTable();
 
 
-        ((TextView) findViewById(R.id.app_tittle)).setText("Faltas-"+aula_key);
+        // ((TextView) findViewById(R.id.app_tittle)).setText("Faltas-"+aula_key);
 
         TableLayout mainTable = (TableLayout) findViewById(R.id.mainTable);
 
@@ -91,6 +94,8 @@ public class Falta extends AppCompatActivity {
                     bottom_table.setVisibility(View.VISIBLE);
                     for(Switch s:all_switches)
                             s.setChecked(true);
+                    for(Switch b:box_swicthes)
+                        b.setChecked(false);
                 }
                 else {
 
@@ -100,6 +105,8 @@ public class Falta extends AppCompatActivity {
                     bottom_table.setVisibility(View.GONE);
                     for(Switch s:all_switches)
                         s.setChecked(false);
+                    for(Switch b:box_swicthes)
+                        b.setChecked(false);
                 }
 
             }
@@ -119,7 +126,7 @@ public class Falta extends AppCompatActivity {
         TextView t1 = (TextView) clayout.getChildAt(2);
         TextView t2 = (TextView) clayout.getChildAt(3);
         Switch swi = (Switch) clayout.getChildAt(4);
-        TextView t3 = (TextView) clayout.getChildAt(5);
+        final TextView t3 = (TextView) clayout.getChildAt(5);
         this.all_switches.add(swi);
         swi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -133,15 +140,25 @@ public class Falta extends AppCompatActivity {
                     ConstraintLayout.LayoutParams layoutParams = (ConstraintLayout.LayoutParams) scroll.getLayoutParams();
                     layoutParams.bottomMargin=20;
                     scroll.setLayoutParams(layoutParams);
-                    bottom_table.setVisibility(View.VISIBLE);
 
+                    if(t3.getText().toString().contains("Justificada"))
+                        box_swicthes.get(0).setChecked(true);
+                    if(t3.getText().toString().contains("Material"))
+                        box_swicthes.get(1).setChecked(true);
+                    if(t3.getText().toString().contains("Injustificada"))
+                        box_swicthes.get(2).setChecked(true);
+                    if(t3.getText().toString().contains("Disciplinar"))
+                        box_swicthes.get(3).setChecked(true);
+                    bottom_table.setVisibility(View.VISIBLE);
                 }
                 else {
                     ConstraintLayout.LayoutParams layoutParams = (ConstraintLayout.LayoutParams) scroll.getLayoutParams();
                     layoutParams.bottomMargin=0;
                     scroll.setLayoutParams(layoutParams);
-                    bottom_table.setVisibility(View.GONE);
 
+                    for (Switch b : box_swicthes)
+                        b.setChecked(false);
+                    bottom_table.setVisibility(View.GONE);
                 }
 
             }
@@ -257,6 +274,8 @@ public class Falta extends AppCompatActivity {
     }
 
     public void homeButton(View view) {
-        startActivity(new Intent(this, HomePage.class));
+        Intent new_page = new Intent(this, HomePage.class);
+        new_page.putExtra("person", "docente");
+        startActivity(new_page);
     }
 }

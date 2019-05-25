@@ -103,6 +103,8 @@ public class DiaHorario extends AppCompatActivity {
     }
 
     public void homeButton(View view) {
-        startActivity(new Intent(this, HomePage.class));
+        Intent new_page = new Intent(this, HomePage.class);
+        new_page.putExtra("person", "aluno");
+        startActivity(new_page);
     }
 }

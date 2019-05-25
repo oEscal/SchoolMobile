@@ -147,6 +147,8 @@ public class HorarioPageDocente extends AppCompatActivity implements GestureDete
     }
 
     public void homeButton(View view) {
-        startActivity(new Intent(this, HomePage.class));
+        Intent new_page = new Intent(this, HomePage.class);
+        new_page.putExtra("person", "docente");
+        startActivity(new_page);
     }
 }

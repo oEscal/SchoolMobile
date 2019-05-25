@@ -47,6 +47,7 @@ public class Disciplina_Info_Page extends AppCompatActivity {
 
         Intent intent = new Intent(this, Messages.class);
         intent.putExtra("name", this.name);
+        intent.putExtra("person", "aluno");
 
         startActivity(intent);
     }
@@ -56,6 +57,8 @@ public class Disciplina_Info_Page extends AppCompatActivity {
     }
 
     public void homeButton(View view) {
-        startActivity(new Intent(this, HomePage.class));
+        Intent new_page = new Intent(this, HomePage.class);
+        new_page.putExtra("person", "aluno");
+        startActivity(new_page);
     }
 }
