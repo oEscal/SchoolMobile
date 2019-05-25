@@ -176,4 +176,8 @@ public class HorarioPage extends AppCompatActivity implements GestureDetector.On
 
         setContentView(R.layout.horario_page);
     }
+
+    public void homeButton(View view) {
+        startActivity(new Intent(this, HomePage.class));
+    }
 }

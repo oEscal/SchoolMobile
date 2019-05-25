@@ -111,4 +111,8 @@ public class DisciplinasPage_Aluno extends AppCompatActivity {
     public void backBtnArrow(View view) {
         super.onBackPressed();
     }
+
+    public void homeButton(View view) {
+        startActivity(new Intent(this, HomePage.class));
+    }
 }

@@ -8,6 +8,32 @@
     android:background="@drawable/main_frame"
     tools:context=".HorarioPageDocente">
 
+    <Button
+        android:id="@+id/next_page_button2"
+        style="@style/OtherButtonMenu"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_transparent"
+        android:drawableEnd="@drawable/next_pagehorario"
+        android:onClick="next_page"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toEndOf="@+id/horizontalScrollView" />
+
+    <Button
+        android:id="@+id/home8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00000000"
+        android:drawableStart="@drawable/home"
+        android:onClick="homeButton"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <android.support.v7.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/toolbar"
@@ -34,10 +60,12 @@
     <TextView
         android:id="@+id/app_tittle"
         style="@style/TopBarText"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/hor_rio"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintEnd_toStartOf="@+id/home8"
+        app:layout_constraintStart_toEndOf="@+id/back"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
         app:layout_constraintVertical_bias="0.794"
         tools:ignore="MissingConstraints" />
@@ -93,7 +121,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryTransparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,7 +167,7 @@
 
                     <TextView
                         android:id="@+id/textView"
-                        style="@style/CellHorarioWithIcon"
+                        style="@style/CellHorario"
                         android:layout_width="50dp"
                         android:text="8:30\n9:15"
                         android:textSize="12sp"
@@ -187,7 +215,7 @@
 
                     <TextView
                         android:id="@+id/textView2"
-                        style="@style/CellHorarioWithIcon"
+                        style="@style/CellHorario"
                         android:layout_width="50dp"
                         android:text="9:15\n10:00"
                         android:textSize="12sp"
@@ -235,7 +263,7 @@
 
                     <TextView
                         android:id="@+id/textView3"
-                        style="@style/CellHorarioWithIcon"
+                        style="@style/CellHorario"
                         android:layout_width="50dp"
                         android:text="10:20\n11:05"
                         android:textSize="12sp"
@@ -283,7 +311,7 @@
 
                     <TextView
                         android:id="@+id/textView4"
-                        style="@style/CellHorarioWithIcon"
+                        style="@style/CellHorario"
                         android:layout_width="50dp"
                         android:text="11:05\n11:50"
                         android:textSize="12sp"
@@ -329,7 +357,7 @@
 
                     <TextView
                         android:id="@+id/textView5"
-                        style="@style/CellHorarioWithIcon"
+                        style="@style/CellHorario"
                         android:layout_width="50dp"
                         android:text="12:00\n12:45"
                         android:textSize="12sp"
@@ -375,7 +403,7 @@
 
                     <TextView
                         android:id="@+id/textView6"
-                        style="@style/CellHorarioWithIcon"
+                        style="@style/CellHorario"
                         android:layout_width="50dp"
                         android:text="12:45\n13:30"
                         android:textSize="12sp"
@@ -425,7 +453,7 @@
 
                     <TextView
                         android:id="@+id/textView7"
-                        style="@style/CellHorarioWithIcon"
+                        style="@style/CellHorario"
                         android:layout_width="50dp"
                         android:text="12:45\n13:30"
                         android:textSize="12sp"
@@ -470,7 +498,7 @@
 
                     <TextView
                         android:id="@+id/textView8"
-                        style="@style/CellHorarioWithIcon"
+                        style="@style/CellHorario"
                         android:layout_width="50dp"
                         android:text="13:50\n14:35"
                         android:textSize="12sp"
@@ -514,7 +542,7 @@
 
                     <TextView
                         android:id="@+id/textView9"
-                        style="@style/CellHorarioWithIcon"
+                        style="@style/CellHorario"
                         android:layout_width="50dp"
                         android:text="14:35\n15:20"
                         android:textSize="12sp"
@@ -558,7 +586,7 @@
 
                     <TextView
                         android:id="@+id/textView10"
-                        style="@style/CellHorarioWithIcon"
+                        style="@style/CellHorario"
                         android:layout_width="50dp"
                         android:text="15:30\n16:15"
                         android:textSize="12sp"
@@ -602,7 +630,7 @@
 
                     <TextView
                         android:id="@+id/textView11"
-                        style="@style/CellHorarioWithIcon"
+                        style="@style/CellHorario"
                         android:layout_width="50dp"
                         android:text="16:15\n17:00"
                         android:textSize="12sp"

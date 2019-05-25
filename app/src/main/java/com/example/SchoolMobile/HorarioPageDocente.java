@@ -135,4 +135,18 @@ public class HorarioPageDocente extends AppCompatActivity implements GestureDete
 
         return super.dispatchTouchEvent(ev);
     }
+
+    public void next_page(View view) {
+
+        setContentView(R.layout.horario_page2);
+    }
+
+    public void prev_page(View view) {
+
+        setContentView(R.layout.horario_page);
+    }
+
+    public void homeButton(View view) {
+        startActivity(new Intent(this, HomePage.class));
+    }
 }

@@ -49,4 +49,8 @@ public class Turmas extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void homeButton(View view) {
+        startActivity(new Intent(this, HomePage.class));
+    }
 }

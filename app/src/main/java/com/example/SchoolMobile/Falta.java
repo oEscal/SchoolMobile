@@ -1,6 +1,7 @@
 package com.example.SchoolMobile;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -253,5 +254,9 @@ public class Falta extends AppCompatActivity {
 
                     }})
                 .setNegativeButton(android.R.string.no, null).show();
+    }
+
+    public void homeButton(View view) {
+        startActivity(new Intent(this, HomePage.class));
     }
 }

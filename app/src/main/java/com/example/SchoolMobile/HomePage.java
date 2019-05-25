@@ -56,4 +56,8 @@ public class HomePage extends AppCompatActivity {
         }
 
     }
+
+    public void homeButton(View view) {
+        startActivity(new Intent(this, HomePage.class));
+    }
 }

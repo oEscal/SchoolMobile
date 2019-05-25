@@ -32,4 +32,8 @@ public class ChooseChat extends AppCompatActivity {
             i.putExtra("dest","turma") ;
         startActivity(i);
     }
+
+    public void homeButton(View view) {
+        startActivity(new Intent(this, HomePage.class));
+    }
 }

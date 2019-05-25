@@ -1,6 +1,7 @@
 package com.example.SchoolMobile;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
@@ -117,5 +118,9 @@ public class Messages extends AppCompatActivity {
 
     public void backBtnArrow(View view) {
         super.onBackPressed();
+    }
+
+    public void homeButton(View view) {
+        startActivity(new Intent(this, HomePage.class));
     }
 }

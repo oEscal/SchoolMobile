@@ -1,6 +1,7 @@
 package com.example.SchoolMobile;
 
 
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -123,5 +124,9 @@ public class EmentaPage extends AppCompatActivity {
 
     public void backBtnArrow(View view) {
         super.onBackPressed();
+    }
+
+    public void homeButton(View view) {
+        startActivity(new Intent(this, HomePage.class));
     }
 }

@@ -27,4 +27,8 @@ public class LoginPage extends AppCompatActivity {
         intent.putExtra("person", "docente");
         startActivity(intent);
     }
+
+    public void homeButton(View view) {
+        startActivity(new Intent(this, HomePage.class));
+    }
 }

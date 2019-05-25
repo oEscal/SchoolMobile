@@ -94,7 +94,9 @@ public class Aulas extends AppCompatActivity {
         intent.putExtra("key",this.key);
         intent.putExtra("aula_key",tview1.getText());
         startActivity(intent);
+    }
 
-
+    public void homeButton(View view) {
+        startActivity(new Intent(this, HomePage.class));
     }
 }
